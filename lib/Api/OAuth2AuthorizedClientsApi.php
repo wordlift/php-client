@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Wordlift\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Wordlift\Client\ApiException;
+use Wordlift\Client\Configuration;
+use Wordlift\Client\HeaderSelector;
+use Wordlift\Client\ObjectSerializer;
 
 /**
  * OAuth2AuthorizedClientsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -140,12 +140,12 @@ class OAuth2AuthorizedClientsApi
      *
      * Create
      *
-     * @param  \OpenAPI\Client\Model\OAuth2AuthorizedClientRequest $o_auth2_authorized_client_request o_auth2_authorized_client_request (required)
+     * @param  \Wordlift\Client\Model\OAuth2AuthorizedClientRequest $o_auth2_authorized_client_request o_auth2_authorized_client_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOAuth2AuthorizedClient'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OAuth2AuthorizedClient
+     * @return \Wordlift\Client\Model\OAuth2AuthorizedClient
      */
     public function createOAuth2AuthorizedClient($o_auth2_authorized_client_request, string $contentType = self::contentTypes['createOAuth2AuthorizedClient'][0])
     {
@@ -158,12 +158,12 @@ class OAuth2AuthorizedClientsApi
      *
      * Create
      *
-     * @param  \OpenAPI\Client\Model\OAuth2AuthorizedClientRequest $o_auth2_authorized_client_request (required)
+     * @param  \Wordlift\Client\Model\OAuth2AuthorizedClientRequest $o_auth2_authorized_client_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOAuth2AuthorizedClient'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OAuth2AuthorizedClient, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Wordlift\Client\Model\OAuth2AuthorizedClient, HTTP status code, HTTP response headers (array of strings)
      */
     public function createOAuth2AuthorizedClientWithHttpInfo($o_auth2_authorized_client_request, string $contentType = self::contentTypes['createOAuth2AuthorizedClient'][0])
     {
@@ -206,11 +206,11 @@ class OAuth2AuthorizedClientsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OAuth2AuthorizedClient' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\OAuth2AuthorizedClient' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OAuth2AuthorizedClient' !== 'string') {
+                        if ('\Wordlift\Client\Model\OAuth2AuthorizedClient' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -228,13 +228,13 @@ class OAuth2AuthorizedClientsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OAuth2AuthorizedClient', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\OAuth2AuthorizedClient', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OAuth2AuthorizedClient';
+            $returnType = '\Wordlift\Client\Model\OAuth2AuthorizedClient';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -267,7 +267,7 @@ class OAuth2AuthorizedClientsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OAuth2AuthorizedClient',
+                        '\Wordlift\Client\Model\OAuth2AuthorizedClient',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -282,7 +282,7 @@ class OAuth2AuthorizedClientsApi
      *
      * Create
      *
-     * @param  \OpenAPI\Client\Model\OAuth2AuthorizedClientRequest $o_auth2_authorized_client_request (required)
+     * @param  \Wordlift\Client\Model\OAuth2AuthorizedClientRequest $o_auth2_authorized_client_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOAuth2AuthorizedClient'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -303,7 +303,7 @@ class OAuth2AuthorizedClientsApi
      *
      * Create
      *
-     * @param  \OpenAPI\Client\Model\OAuth2AuthorizedClientRequest $o_auth2_authorized_client_request (required)
+     * @param  \Wordlift\Client\Model\OAuth2AuthorizedClientRequest $o_auth2_authorized_client_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOAuth2AuthorizedClient'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -311,7 +311,7 @@ class OAuth2AuthorizedClientsApi
      */
     public function createOAuth2AuthorizedClientAsyncWithHttpInfo($o_auth2_authorized_client_request, string $contentType = self::contentTypes['createOAuth2AuthorizedClient'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OAuth2AuthorizedClient';
+        $returnType = '\Wordlift\Client\Model\OAuth2AuthorizedClient';
         $request = $this->createOAuth2AuthorizedClientRequest($o_auth2_authorized_client_request, $contentType);
 
         return $this->client
@@ -353,7 +353,7 @@ class OAuth2AuthorizedClientsApi
     /**
      * Create request for operation 'createOAuth2AuthorizedClient'
      *
-     * @param  \OpenAPI\Client\Model\OAuth2AuthorizedClientRequest $o_auth2_authorized_client_request (required)
+     * @param  \Wordlift\Client\Model\OAuth2AuthorizedClientRequest $o_auth2_authorized_client_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOAuth2AuthorizedClient'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -453,7 +453,7 @@ class OAuth2AuthorizedClientsApi
      * @param  int $id The Id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteOAuth2AuthorizedClient'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -470,7 +470,7 @@ class OAuth2AuthorizedClientsApi
      * @param  int $id The Id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteOAuth2AuthorizedClient'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -686,9 +686,9 @@ class OAuth2AuthorizedClientsApi
      * @param  int $id The Id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOAuth2AuthorizedClient'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OAuth2AuthorizedClient
+     * @return \Wordlift\Client\Model\OAuth2AuthorizedClient
      */
     public function getOAuth2AuthorizedClient($id, string $contentType = self::contentTypes['getOAuth2AuthorizedClient'][0])
     {
@@ -704,9 +704,9 @@ class OAuth2AuthorizedClientsApi
      * @param  int $id The Id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOAuth2AuthorizedClient'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OAuth2AuthorizedClient, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Wordlift\Client\Model\OAuth2AuthorizedClient, HTTP status code, HTTP response headers (array of strings)
      */
     public function getOAuth2AuthorizedClientWithHttpInfo($id, string $contentType = self::contentTypes['getOAuth2AuthorizedClient'][0])
     {
@@ -749,11 +749,11 @@ class OAuth2AuthorizedClientsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OAuth2AuthorizedClient' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\OAuth2AuthorizedClient' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OAuth2AuthorizedClient' !== 'string') {
+                        if ('\Wordlift\Client\Model\OAuth2AuthorizedClient' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -771,13 +771,13 @@ class OAuth2AuthorizedClientsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OAuth2AuthorizedClient', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\OAuth2AuthorizedClient', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OAuth2AuthorizedClient';
+            $returnType = '\Wordlift\Client\Model\OAuth2AuthorizedClient';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -810,7 +810,7 @@ class OAuth2AuthorizedClientsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OAuth2AuthorizedClient',
+                        '\Wordlift\Client\Model\OAuth2AuthorizedClient',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -854,7 +854,7 @@ class OAuth2AuthorizedClientsApi
      */
     public function getOAuth2AuthorizedClientAsyncWithHttpInfo($id, string $contentType = self::contentTypes['getOAuth2AuthorizedClient'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OAuth2AuthorizedClient';
+        $returnType = '\Wordlift\Client\Model\OAuth2AuthorizedClient';
         $request = $this->getOAuth2AuthorizedClientRequest($id, $contentType);
 
         return $this->client
@@ -998,9 +998,9 @@ class OAuth2AuthorizedClientsApi
      * @param  int $limit The maximum number of results (optional, default to 10)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listOAuth2AuthorizedClients'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PageOAuth2AuthorizedClient
+     * @return \Wordlift\Client\Model\PageOAuth2AuthorizedClient
      */
     public function listOAuth2AuthorizedClients($cursor = null, $limit = 10, string $contentType = self::contentTypes['listOAuth2AuthorizedClients'][0])
     {
@@ -1017,9 +1017,9 @@ class OAuth2AuthorizedClientsApi
      * @param  int $limit The maximum number of results (optional, default to 10)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listOAuth2AuthorizedClients'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PageOAuth2AuthorizedClient, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Wordlift\Client\Model\PageOAuth2AuthorizedClient, HTTP status code, HTTP response headers (array of strings)
      */
     public function listOAuth2AuthorizedClientsWithHttpInfo($cursor = null, $limit = 10, string $contentType = self::contentTypes['listOAuth2AuthorizedClients'][0])
     {
@@ -1062,11 +1062,11 @@ class OAuth2AuthorizedClientsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PageOAuth2AuthorizedClient' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\PageOAuth2AuthorizedClient' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PageOAuth2AuthorizedClient' !== 'string') {
+                        if ('\Wordlift\Client\Model\PageOAuth2AuthorizedClient' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1084,13 +1084,13 @@ class OAuth2AuthorizedClientsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PageOAuth2AuthorizedClient', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\PageOAuth2AuthorizedClient', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PageOAuth2AuthorizedClient';
+            $returnType = '\Wordlift\Client\Model\PageOAuth2AuthorizedClient';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1123,7 +1123,7 @@ class OAuth2AuthorizedClientsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PageOAuth2AuthorizedClient',
+                        '\Wordlift\Client\Model\PageOAuth2AuthorizedClient',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1169,7 +1169,7 @@ class OAuth2AuthorizedClientsApi
      */
     public function listOAuth2AuthorizedClientsAsyncWithHttpInfo($cursor = null, $limit = 10, string $contentType = self::contentTypes['listOAuth2AuthorizedClients'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PageOAuth2AuthorizedClient';
+        $returnType = '\Wordlift\Client\Model\PageOAuth2AuthorizedClient';
         $request = $this->listOAuth2AuthorizedClientsRequest($cursor, $limit, $contentType);
 
         return $this->client
@@ -1316,12 +1316,12 @@ class OAuth2AuthorizedClientsApi
      * Update
      *
      * @param  int $id The Id (required)
-     * @param  \OpenAPI\Client\Model\OAuth2AuthorizedClientRequest $o_auth2_authorized_client_request o_auth2_authorized_client_request (required)
+     * @param  \Wordlift\Client\Model\OAuth2AuthorizedClientRequest $o_auth2_authorized_client_request o_auth2_authorized_client_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOAuth2AuthorizedClient'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OAuth2AuthorizedClient
+     * @return \Wordlift\Client\Model\OAuth2AuthorizedClient
      */
     public function updateOAuth2AuthorizedClient($id, $o_auth2_authorized_client_request, string $contentType = self::contentTypes['updateOAuth2AuthorizedClient'][0])
     {
@@ -1335,12 +1335,12 @@ class OAuth2AuthorizedClientsApi
      * Update
      *
      * @param  int $id The Id (required)
-     * @param  \OpenAPI\Client\Model\OAuth2AuthorizedClientRequest $o_auth2_authorized_client_request (required)
+     * @param  \Wordlift\Client\Model\OAuth2AuthorizedClientRequest $o_auth2_authorized_client_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOAuth2AuthorizedClient'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OAuth2AuthorizedClient, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Wordlift\Client\Model\OAuth2AuthorizedClient, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateOAuth2AuthorizedClientWithHttpInfo($id, $o_auth2_authorized_client_request, string $contentType = self::contentTypes['updateOAuth2AuthorizedClient'][0])
     {
@@ -1383,11 +1383,11 @@ class OAuth2AuthorizedClientsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OAuth2AuthorizedClient' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\OAuth2AuthorizedClient' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OAuth2AuthorizedClient' !== 'string') {
+                        if ('\Wordlift\Client\Model\OAuth2AuthorizedClient' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1405,13 +1405,13 @@ class OAuth2AuthorizedClientsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OAuth2AuthorizedClient', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\OAuth2AuthorizedClient', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OAuth2AuthorizedClient';
+            $returnType = '\Wordlift\Client\Model\OAuth2AuthorizedClient';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1444,7 +1444,7 @@ class OAuth2AuthorizedClientsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OAuth2AuthorizedClient',
+                        '\Wordlift\Client\Model\OAuth2AuthorizedClient',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1460,7 +1460,7 @@ class OAuth2AuthorizedClientsApi
      * Update
      *
      * @param  int $id The Id (required)
-     * @param  \OpenAPI\Client\Model\OAuth2AuthorizedClientRequest $o_auth2_authorized_client_request (required)
+     * @param  \Wordlift\Client\Model\OAuth2AuthorizedClientRequest $o_auth2_authorized_client_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOAuth2AuthorizedClient'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1482,7 +1482,7 @@ class OAuth2AuthorizedClientsApi
      * Update
      *
      * @param  int $id The Id (required)
-     * @param  \OpenAPI\Client\Model\OAuth2AuthorizedClientRequest $o_auth2_authorized_client_request (required)
+     * @param  \Wordlift\Client\Model\OAuth2AuthorizedClientRequest $o_auth2_authorized_client_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOAuth2AuthorizedClient'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1490,7 +1490,7 @@ class OAuth2AuthorizedClientsApi
      */
     public function updateOAuth2AuthorizedClientAsyncWithHttpInfo($id, $o_auth2_authorized_client_request, string $contentType = self::contentTypes['updateOAuth2AuthorizedClient'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OAuth2AuthorizedClient';
+        $returnType = '\Wordlift\Client\Model\OAuth2AuthorizedClient';
         $request = $this->updateOAuth2AuthorizedClientRequest($id, $o_auth2_authorized_client_request, $contentType);
 
         return $this->client
@@ -1533,7 +1533,7 @@ class OAuth2AuthorizedClientsApi
      * Create request for operation 'updateOAuth2AuthorizedClient'
      *
      * @param  int $id The Id (required)
-     * @param  \OpenAPI\Client\Model\OAuth2AuthorizedClientRequest $o_auth2_authorized_client_request (required)
+     * @param  \Wordlift\Client\Model\OAuth2AuthorizedClientRequest $o_auth2_authorized_client_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOAuth2AuthorizedClient'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

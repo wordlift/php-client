@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**embedding** | [**\OpenAPI\Client\Model\EmbeddingRequest**](EmbeddingRequest.md) |  | [optional]
+**embedding** | [**\Wordlift\Client\Model\EmbeddingRequest**](EmbeddingRequest.md) |  | [optional]
 **output_types** | **string[]** | The type of the generated entities, by default &#x60;http://schema.org/WebPage&#x60;. | [optional]
 **overwrite** | **bool** | Whether to overwrite existing entities. | [optional] [default to false]
 **sitemap_url** | **string** | The sitemap URL | [optional]

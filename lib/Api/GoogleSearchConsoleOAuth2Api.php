@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Wordlift\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Wordlift\Client\ApiException;
+use Wordlift\Client\Configuration;
+use Wordlift\Client\HeaderSelector;
+use Wordlift\Client\ObjectSerializer;
 
 /**
  * GoogleSearchConsoleOAuth2Api Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -131,12 +131,12 @@ class GoogleSearchConsoleOAuth2Api
      *
      * Get an Access Code
      *
-     * @param  \OpenAPI\Client\Model\ExchangeAuthCodeRequest $exchange_auth_code_request exchange_auth_code_request (required)
+     * @param  \Wordlift\Client\Model\ExchangeAuthCodeRequest $exchange_auth_code_request exchange_auth_code_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAuthCodeExchange'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ExchangeAuthCodeResponse
+     * @return \Wordlift\Client\Model\ExchangeAuthCodeResponse
      */
     public function createAuthCodeExchange($exchange_auth_code_request, string $contentType = self::contentTypes['createAuthCodeExchange'][0])
     {
@@ -149,12 +149,12 @@ class GoogleSearchConsoleOAuth2Api
      *
      * Get an Access Code
      *
-     * @param  \OpenAPI\Client\Model\ExchangeAuthCodeRequest $exchange_auth_code_request (required)
+     * @param  \Wordlift\Client\Model\ExchangeAuthCodeRequest $exchange_auth_code_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAuthCodeExchange'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ExchangeAuthCodeResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Wordlift\Client\Model\ExchangeAuthCodeResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createAuthCodeExchangeWithHttpInfo($exchange_auth_code_request, string $contentType = self::contentTypes['createAuthCodeExchange'][0])
     {
@@ -197,11 +197,11 @@ class GoogleSearchConsoleOAuth2Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ExchangeAuthCodeResponse' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\ExchangeAuthCodeResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ExchangeAuthCodeResponse' !== 'string') {
+                        if ('\Wordlift\Client\Model\ExchangeAuthCodeResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -219,13 +219,13 @@ class GoogleSearchConsoleOAuth2Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ExchangeAuthCodeResponse', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\ExchangeAuthCodeResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ExchangeAuthCodeResponse';
+            $returnType = '\Wordlift\Client\Model\ExchangeAuthCodeResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -258,7 +258,7 @@ class GoogleSearchConsoleOAuth2Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ExchangeAuthCodeResponse',
+                        '\Wordlift\Client\Model\ExchangeAuthCodeResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -273,7 +273,7 @@ class GoogleSearchConsoleOAuth2Api
      *
      * Get an Access Code
      *
-     * @param  \OpenAPI\Client\Model\ExchangeAuthCodeRequest $exchange_auth_code_request (required)
+     * @param  \Wordlift\Client\Model\ExchangeAuthCodeRequest $exchange_auth_code_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAuthCodeExchange'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -294,7 +294,7 @@ class GoogleSearchConsoleOAuth2Api
      *
      * Get an Access Code
      *
-     * @param  \OpenAPI\Client\Model\ExchangeAuthCodeRequest $exchange_auth_code_request (required)
+     * @param  \Wordlift\Client\Model\ExchangeAuthCodeRequest $exchange_auth_code_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAuthCodeExchange'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -302,7 +302,7 @@ class GoogleSearchConsoleOAuth2Api
      */
     public function createAuthCodeExchangeAsyncWithHttpInfo($exchange_auth_code_request, string $contentType = self::contentTypes['createAuthCodeExchange'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ExchangeAuthCodeResponse';
+        $returnType = '\Wordlift\Client\Model\ExchangeAuthCodeResponse';
         $request = $this->createAuthCodeExchangeRequest($exchange_auth_code_request, $contentType);
 
         return $this->client
@@ -344,7 +344,7 @@ class GoogleSearchConsoleOAuth2Api
     /**
      * Create request for operation 'createAuthCodeExchange'
      *
-     * @param  \OpenAPI\Client\Model\ExchangeAuthCodeRequest $exchange_auth_code_request (required)
+     * @param  \Wordlift\Client\Model\ExchangeAuthCodeRequest $exchange_auth_code_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAuthCodeExchange'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -442,12 +442,12 @@ class GoogleSearchConsoleOAuth2Api
      *
      * Create an Authorization URI
      *
-     * @param  \OpenAPI\Client\Model\BuildAuthorizeUriRequest $build_authorize_uri_request build_authorize_uri_request (required)
+     * @param  \Wordlift\Client\Model\BuildAuthorizeUriRequest $build_authorize_uri_request build_authorize_uri_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAuthorizeUri'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\BuildAuthorizeUriResponse
+     * @return \Wordlift\Client\Model\BuildAuthorizeUriResponse
      */
     public function createAuthorizeUri($build_authorize_uri_request, string $contentType = self::contentTypes['createAuthorizeUri'][0])
     {
@@ -460,12 +460,12 @@ class GoogleSearchConsoleOAuth2Api
      *
      * Create an Authorization URI
      *
-     * @param  \OpenAPI\Client\Model\BuildAuthorizeUriRequest $build_authorize_uri_request (required)
+     * @param  \Wordlift\Client\Model\BuildAuthorizeUriRequest $build_authorize_uri_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAuthorizeUri'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\BuildAuthorizeUriResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Wordlift\Client\Model\BuildAuthorizeUriResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createAuthorizeUriWithHttpInfo($build_authorize_uri_request, string $contentType = self::contentTypes['createAuthorizeUri'][0])
     {
@@ -508,11 +508,11 @@ class GoogleSearchConsoleOAuth2Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\BuildAuthorizeUriResponse' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\BuildAuthorizeUriResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BuildAuthorizeUriResponse' !== 'string') {
+                        if ('\Wordlift\Client\Model\BuildAuthorizeUriResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -530,13 +530,13 @@ class GoogleSearchConsoleOAuth2Api
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BuildAuthorizeUriResponse', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\BuildAuthorizeUriResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\BuildAuthorizeUriResponse';
+            $returnType = '\Wordlift\Client\Model\BuildAuthorizeUriResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -569,7 +569,7 @@ class GoogleSearchConsoleOAuth2Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BuildAuthorizeUriResponse',
+                        '\Wordlift\Client\Model\BuildAuthorizeUriResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -584,7 +584,7 @@ class GoogleSearchConsoleOAuth2Api
      *
      * Create an Authorization URI
      *
-     * @param  \OpenAPI\Client\Model\BuildAuthorizeUriRequest $build_authorize_uri_request (required)
+     * @param  \Wordlift\Client\Model\BuildAuthorizeUriRequest $build_authorize_uri_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAuthorizeUri'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -605,7 +605,7 @@ class GoogleSearchConsoleOAuth2Api
      *
      * Create an Authorization URI
      *
-     * @param  \OpenAPI\Client\Model\BuildAuthorizeUriRequest $build_authorize_uri_request (required)
+     * @param  \Wordlift\Client\Model\BuildAuthorizeUriRequest $build_authorize_uri_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAuthorizeUri'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -613,7 +613,7 @@ class GoogleSearchConsoleOAuth2Api
      */
     public function createAuthorizeUriAsyncWithHttpInfo($build_authorize_uri_request, string $contentType = self::contentTypes['createAuthorizeUri'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\BuildAuthorizeUriResponse';
+        $returnType = '\Wordlift\Client\Model\BuildAuthorizeUriResponse';
         $request = $this->createAuthorizeUriRequest($build_authorize_uri_request, $contentType);
 
         return $this->client
@@ -655,7 +655,7 @@ class GoogleSearchConsoleOAuth2Api
     /**
      * Create request for operation 'createAuthorizeUri'
      *
-     * @param  \OpenAPI\Client\Model\BuildAuthorizeUriRequest $build_authorize_uri_request (required)
+     * @param  \Wordlift\Client\Model\BuildAuthorizeUriRequest $build_authorize_uri_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAuthorizeUri'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

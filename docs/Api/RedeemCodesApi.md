@@ -1,4 +1,4 @@
-# OpenAPI\Client\RedeemCodesApi
+# Wordlift\Client\RedeemCodesApi
 
 All URIs are relative to https://api.wordlift.io, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to https://api.wordlift.io, except if the operation define
 ## `redeemCode()`
 
 ```php
-redeemCode($request): \OpenAPI\Client\Model\Response
+redeemCode($request): \Wordlift\Client\Model\Response
 ```
 
 Redeem the provided code and get a key
@@ -23,12 +23,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\RedeemCodesApi(
+$apiInstance = new Wordlift\Client\Api\RedeemCodesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$request = new \OpenAPI\Client\Model\Request(); // \OpenAPI\Client\Model\Request
+$request = new \Wordlift\Client\Model\Request(); // \Wordlift\Client\Model\Request
 
 try {
     $result = $apiInstance->redeemCode($request);
@@ -42,11 +42,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **request** | [**\OpenAPI\Client\Model\Request**](../Model/Request.md)|  | |
+| **request** | [**\Wordlift\Client\Model\Request**](../Model/Request.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Response**](../Model/Response.md)
+[**\Wordlift\Client\Model\Response**](../Model/Response.md)
 
 ### Authorization
 

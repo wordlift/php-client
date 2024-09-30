@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Wordlift\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Wordlift\Client\ApiException;
+use Wordlift\Client\Configuration;
+use Wordlift\Client\HeaderSelector;
+use Wordlift\Client\ObjectSerializer;
 
 /**
  * AddOnsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -133,9 +133,9 @@ class AddOnsApi
      * @param  int $limit The maximum number of results (optional, default to 10)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listConfigurations'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PageAddOnConfiguration
+     * @return \Wordlift\Client\Model\PageAddOnConfiguration
      */
     public function listConfigurations($token = null, $key = null, $limit = 10, string $contentType = self::contentTypes['listConfigurations'][0])
     {
@@ -153,9 +153,9 @@ class AddOnsApi
      * @param  int $limit The maximum number of results (optional, default to 10)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listConfigurations'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PageAddOnConfiguration, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Wordlift\Client\Model\PageAddOnConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
     public function listConfigurationsWithHttpInfo($token = null, $key = null, $limit = 10, string $contentType = self::contentTypes['listConfigurations'][0])
     {
@@ -198,11 +198,11 @@ class AddOnsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PageAddOnConfiguration' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\PageAddOnConfiguration' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PageAddOnConfiguration' !== 'string') {
+                        if ('\Wordlift\Client\Model\PageAddOnConfiguration' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -220,13 +220,13 @@ class AddOnsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PageAddOnConfiguration', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\PageAddOnConfiguration', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PageAddOnConfiguration';
+            $returnType = '\Wordlift\Client\Model\PageAddOnConfiguration';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -259,7 +259,7 @@ class AddOnsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PageAddOnConfiguration',
+                        '\Wordlift\Client\Model\PageAddOnConfiguration',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -307,7 +307,7 @@ class AddOnsApi
      */
     public function listConfigurationsAsyncWithHttpInfo($token = null, $key = null, $limit = 10, string $contentType = self::contentTypes['listConfigurations'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PageAddOnConfiguration';
+        $returnType = '\Wordlift\Client\Model\PageAddOnConfiguration';
         $request = $this->listConfigurationsRequest($token, $key, $limit, $contentType);
 
         return $this->client

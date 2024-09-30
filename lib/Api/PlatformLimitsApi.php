@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Wordlift\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Wordlift\Client\ApiException;
+use Wordlift\Client\Configuration;
+use Wordlift\Client\HeaderSelector;
+use Wordlift\Client\ObjectSerializer;
 
 /**
  * PlatformLimitsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -140,12 +140,12 @@ class PlatformLimitsApi
      *
      * Create Platform Limit
      *
-     * @param  \OpenAPI\Client\Model\PlatformLimitRequest $platform_limit_request platform_limit_request (required)
+     * @param  \Wordlift\Client\Model\PlatformLimitRequest $platform_limit_request platform_limit_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPlatformLimit'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PlatformLimit
+     * @return \Wordlift\Client\Model\PlatformLimit
      */
     public function createPlatformLimit($platform_limit_request, string $contentType = self::contentTypes['createPlatformLimit'][0])
     {
@@ -158,12 +158,12 @@ class PlatformLimitsApi
      *
      * Create Platform Limit
      *
-     * @param  \OpenAPI\Client\Model\PlatformLimitRequest $platform_limit_request (required)
+     * @param  \Wordlift\Client\Model\PlatformLimitRequest $platform_limit_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPlatformLimit'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PlatformLimit, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Wordlift\Client\Model\PlatformLimit, HTTP status code, HTTP response headers (array of strings)
      */
     public function createPlatformLimitWithHttpInfo($platform_limit_request, string $contentType = self::contentTypes['createPlatformLimit'][0])
     {
@@ -206,11 +206,11 @@ class PlatformLimitsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PlatformLimit' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\PlatformLimit' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PlatformLimit' !== 'string') {
+                        if ('\Wordlift\Client\Model\PlatformLimit' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -228,13 +228,13 @@ class PlatformLimitsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PlatformLimit', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\PlatformLimit', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PlatformLimit';
+            $returnType = '\Wordlift\Client\Model\PlatformLimit';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -267,7 +267,7 @@ class PlatformLimitsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PlatformLimit',
+                        '\Wordlift\Client\Model\PlatformLimit',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -282,7 +282,7 @@ class PlatformLimitsApi
      *
      * Create Platform Limit
      *
-     * @param  \OpenAPI\Client\Model\PlatformLimitRequest $platform_limit_request (required)
+     * @param  \Wordlift\Client\Model\PlatformLimitRequest $platform_limit_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPlatformLimit'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -303,7 +303,7 @@ class PlatformLimitsApi
      *
      * Create Platform Limit
      *
-     * @param  \OpenAPI\Client\Model\PlatformLimitRequest $platform_limit_request (required)
+     * @param  \Wordlift\Client\Model\PlatformLimitRequest $platform_limit_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPlatformLimit'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -311,7 +311,7 @@ class PlatformLimitsApi
      */
     public function createPlatformLimitAsyncWithHttpInfo($platform_limit_request, string $contentType = self::contentTypes['createPlatformLimit'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PlatformLimit';
+        $returnType = '\Wordlift\Client\Model\PlatformLimit';
         $request = $this->createPlatformLimitRequest($platform_limit_request, $contentType);
 
         return $this->client
@@ -353,7 +353,7 @@ class PlatformLimitsApi
     /**
      * Create request for operation 'createPlatformLimit'
      *
-     * @param  \OpenAPI\Client\Model\PlatformLimitRequest $platform_limit_request (required)
+     * @param  \Wordlift\Client\Model\PlatformLimitRequest $platform_limit_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPlatformLimit'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -453,7 +453,7 @@ class PlatformLimitsApi
      * @param  int $id Platform Limit id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletePlatformLimit'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -470,7 +470,7 @@ class PlatformLimitsApi
      * @param  int $id Platform Limit id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletePlatformLimit'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -686,9 +686,9 @@ class PlatformLimitsApi
      * @param  int $id Platform Limit id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPlatformLimit'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PlatformLimit
+     * @return \Wordlift\Client\Model\PlatformLimit
      */
     public function getPlatformLimit($id, string $contentType = self::contentTypes['getPlatformLimit'][0])
     {
@@ -704,9 +704,9 @@ class PlatformLimitsApi
      * @param  int $id Platform Limit id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPlatformLimit'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PlatformLimit, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Wordlift\Client\Model\PlatformLimit, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPlatformLimitWithHttpInfo($id, string $contentType = self::contentTypes['getPlatformLimit'][0])
     {
@@ -749,11 +749,11 @@ class PlatformLimitsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PlatformLimit' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\PlatformLimit' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PlatformLimit' !== 'string') {
+                        if ('\Wordlift\Client\Model\PlatformLimit' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -771,13 +771,13 @@ class PlatformLimitsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PlatformLimit', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\PlatformLimit', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PlatformLimit';
+            $returnType = '\Wordlift\Client\Model\PlatformLimit';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -810,7 +810,7 @@ class PlatformLimitsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PlatformLimit',
+                        '\Wordlift\Client\Model\PlatformLimit',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -854,7 +854,7 @@ class PlatformLimitsApi
      */
     public function getPlatformLimitAsyncWithHttpInfo($id, string $contentType = self::contentTypes['getPlatformLimit'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PlatformLimit';
+        $returnType = '\Wordlift\Client\Model\PlatformLimit';
         $request = $this->getPlatformLimitRequest($id, $contentType);
 
         return $this->client
@@ -1000,9 +1000,9 @@ class PlatformLimitsApi
      * @param  string[] $scope_in The scope. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listPlatformLimits'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PagePlatformLimit
+     * @return \Wordlift\Client\Model\PagePlatformLimit
      */
     public function listPlatformLimits($based_on_in = null, $based_on_value_in = null, $applies_to_in = null, $scope_in = null, string $contentType = self::contentTypes['listPlatformLimits'][0])
     {
@@ -1021,9 +1021,9 @@ class PlatformLimitsApi
      * @param  string[] $scope_in The scope. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listPlatformLimits'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PagePlatformLimit, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Wordlift\Client\Model\PagePlatformLimit, HTTP status code, HTTP response headers (array of strings)
      */
     public function listPlatformLimitsWithHttpInfo($based_on_in = null, $based_on_value_in = null, $applies_to_in = null, $scope_in = null, string $contentType = self::contentTypes['listPlatformLimits'][0])
     {
@@ -1066,11 +1066,11 @@ class PlatformLimitsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PagePlatformLimit' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\PagePlatformLimit' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PagePlatformLimit' !== 'string') {
+                        if ('\Wordlift\Client\Model\PagePlatformLimit' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1088,13 +1088,13 @@ class PlatformLimitsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PagePlatformLimit', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\PagePlatformLimit', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PagePlatformLimit';
+            $returnType = '\Wordlift\Client\Model\PagePlatformLimit';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1127,7 +1127,7 @@ class PlatformLimitsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PagePlatformLimit',
+                        '\Wordlift\Client\Model\PagePlatformLimit',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1177,7 +1177,7 @@ class PlatformLimitsApi
      */
     public function listPlatformLimitsAsyncWithHttpInfo($based_on_in = null, $based_on_value_in = null, $applies_to_in = null, $scope_in = null, string $contentType = self::contentTypes['listPlatformLimits'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PagePlatformLimit';
+        $returnType = '\Wordlift\Client\Model\PagePlatformLimit';
         $request = $this->listPlatformLimitsRequest($based_on_in, $based_on_value_in, $applies_to_in, $scope_in, $contentType);
 
         return $this->client
@@ -1346,12 +1346,12 @@ class PlatformLimitsApi
      * Update Platform Limit
      *
      * @param  int $id Platform Limit id (required)
-     * @param  \OpenAPI\Client\Model\PlatformLimitRequest $platform_limit_request platform_limit_request (required)
+     * @param  \Wordlift\Client\Model\PlatformLimitRequest $platform_limit_request platform_limit_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePlatformLimit'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PlatformLimit
+     * @return \Wordlift\Client\Model\PlatformLimit
      */
     public function updatePlatformLimit($id, $platform_limit_request, string $contentType = self::contentTypes['updatePlatformLimit'][0])
     {
@@ -1365,12 +1365,12 @@ class PlatformLimitsApi
      * Update Platform Limit
      *
      * @param  int $id Platform Limit id (required)
-     * @param  \OpenAPI\Client\Model\PlatformLimitRequest $platform_limit_request (required)
+     * @param  \Wordlift\Client\Model\PlatformLimitRequest $platform_limit_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePlatformLimit'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PlatformLimit, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Wordlift\Client\Model\PlatformLimit, HTTP status code, HTTP response headers (array of strings)
      */
     public function updatePlatformLimitWithHttpInfo($id, $platform_limit_request, string $contentType = self::contentTypes['updatePlatformLimit'][0])
     {
@@ -1413,11 +1413,11 @@ class PlatformLimitsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PlatformLimit' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\PlatformLimit' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PlatformLimit' !== 'string') {
+                        if ('\Wordlift\Client\Model\PlatformLimit' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1435,13 +1435,13 @@ class PlatformLimitsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PlatformLimit', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\PlatformLimit', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PlatformLimit';
+            $returnType = '\Wordlift\Client\Model\PlatformLimit';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1474,7 +1474,7 @@ class PlatformLimitsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PlatformLimit',
+                        '\Wordlift\Client\Model\PlatformLimit',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1490,7 +1490,7 @@ class PlatformLimitsApi
      * Update Platform Limit
      *
      * @param  int $id Platform Limit id (required)
-     * @param  \OpenAPI\Client\Model\PlatformLimitRequest $platform_limit_request (required)
+     * @param  \Wordlift\Client\Model\PlatformLimitRequest $platform_limit_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePlatformLimit'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1512,7 +1512,7 @@ class PlatformLimitsApi
      * Update Platform Limit
      *
      * @param  int $id Platform Limit id (required)
-     * @param  \OpenAPI\Client\Model\PlatformLimitRequest $platform_limit_request (required)
+     * @param  \Wordlift\Client\Model\PlatformLimitRequest $platform_limit_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePlatformLimit'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1520,7 +1520,7 @@ class PlatformLimitsApi
      */
     public function updatePlatformLimitAsyncWithHttpInfo($id, $platform_limit_request, string $contentType = self::contentTypes['updatePlatformLimit'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PlatformLimit';
+        $returnType = '\Wordlift\Client\Model\PlatformLimit';
         $request = $this->updatePlatformLimitRequest($id, $platform_limit_request, $contentType);
 
         return $this->client
@@ -1563,7 +1563,7 @@ class PlatformLimitsApi
      * Create request for operation 'updatePlatformLimit'
      *
      * @param  int $id Platform Limit id (required)
-     * @param  \OpenAPI\Client\Model\PlatformLimitRequest $platform_limit_request (required)
+     * @param  \Wordlift\Client\Model\PlatformLimitRequest $platform_limit_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePlatformLimit'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

@@ -1,4 +1,4 @@
-# OpenAPI\Client\GoogleSearchConsoleApi
+# Wordlift\Client\GoogleSearchConsoleApi
 
 All URIs are relative to https://api.wordlift.io, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://api.wordlift.io, except if the operation define
 ## `listWebsiteSearch()`
 
 ```php
-listWebsiteSearch($website, $since, $until, $dimensions, $google_access_token, $cursor, $limit): \OpenAPI\Client\Model\PageWebsiteSearch
+listWebsiteSearch($website, $since, $until, $dimensions, $google_access_token, $cursor, $limit): \Wordlift\Client\Model\PageWebsiteSearch
 ```
 
 List Website Search data
@@ -26,7 +26,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\GoogleSearchConsoleApi(
+$apiInstance = new Wordlift\Client\Api\GoogleSearchConsoleApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -61,7 +61,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PageWebsiteSearch**](../Model/PageWebsiteSearch.md)
+[**\Wordlift\Client\Model\PageWebsiteSearch**](../Model/PageWebsiteSearch.md)
 
 ### Authorization
 
@@ -79,7 +79,7 @@ No authorization required
 ## `listWebsites()`
 
 ```php
-listWebsites($google_access_token, $limit): \OpenAPI\Client\Model\PageWebsite
+listWebsites($google_access_token, $limit): \Wordlift\Client\Model\PageWebsite
 ```
 
 List
@@ -94,7 +94,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\GoogleSearchConsoleApi(
+$apiInstance = new Wordlift\Client\Api\GoogleSearchConsoleApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -119,7 +119,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PageWebsite**](../Model/PageWebsite.md)
+[**\Wordlift\Client\Model\PageWebsite**](../Model/PageWebsite.md)
 
 ### Authorization
 

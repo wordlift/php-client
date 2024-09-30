@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Wordlift\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Wordlift\Client\ObjectSerializer;
 
 /**
  * ActiveAccount Class Doc Comment
  *
  * @category Class
  * @description An array of objects.
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,7 +61,7 @@ class ActiveAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'collection' => 'string',
         'country' => 'string',
-        'diagnostic_plugins' => '\OpenAPI\Client\Model\DiagnosticPlugin[]',
+        'diagnostic_plugins' => '\Wordlift\Client\Model\DiagnosticPlugin[]',
         'domain_uri' => 'string',
         'google_search_console_site_url' => 'string',
         'id' => 'int',
@@ -70,7 +70,7 @@ class ActiveAccount implements ModelInterface, ArrayAccess, \JsonSerializable
         'language' => 'string',
         'ng_dataset_id' => 'string',
         'package_type' => 'string',
-        'subscription' => '\OpenAPI\Client\Model\AccountSubscription',
+        'subscription' => '\Wordlift\Client\Model\AccountSubscription',
         'subscription_id' => 'int',
         'total_entities' => 'int',
         'total_entities_with_schema_url' => 'int',
@@ -481,7 +481,7 @@ class ActiveAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets diagnostic_plugins
      *
-     * @return \OpenAPI\Client\Model\DiagnosticPlugin[]|null
+     * @return \Wordlift\Client\Model\DiagnosticPlugin[]|null
      */
     public function getDiagnosticPlugins()
     {
@@ -491,7 +491,7 @@ class ActiveAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets diagnostic_plugins
      *
-     * @param \OpenAPI\Client\Model\DiagnosticPlugin[]|null $diagnostic_plugins diagnostic_plugins
+     * @param \Wordlift\Client\Model\DiagnosticPlugin[]|null $diagnostic_plugins diagnostic_plugins
      *
      * @return self
      */
@@ -724,7 +724,7 @@ class ActiveAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets subscription
      *
-     * @return \OpenAPI\Client\Model\AccountSubscription|null
+     * @return \Wordlift\Client\Model\AccountSubscription|null
      */
     public function getSubscription()
     {
@@ -734,7 +734,7 @@ class ActiveAccount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets subscription
      *
-     * @param \OpenAPI\Client\Model\AccountSubscription|null $subscription subscription
+     * @param \Wordlift\Client\Model\AccountSubscription|null $subscription subscription
      *
      * @return self
      */

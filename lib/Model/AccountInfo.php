@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Wordlift\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Wordlift\Client\ObjectSerializer;
 
 /**
  * AccountInfo Class Doc Comment
  *
  * @category Class
  * @description Account Information
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -67,7 +67,7 @@ class AccountInfo implements ModelInterface, ArrayAccess, \JsonSerializable
         'include_exclude_default' => 'string',
         'key' => 'string',
         'language' => 'string',
-        'networks' => '\OpenAPI\Client\Model\NetworkAccountInfo[]',
+        'networks' => '\Wordlift\Client\Model\NetworkAccountInfo[]',
         'ng_dataset_id' => 'string',
         'subscription_id' => 'int',
         'url' => 'string',
@@ -613,7 +613,7 @@ class AccountInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets networks
      *
-     * @return \OpenAPI\Client\Model\NetworkAccountInfo[]
+     * @return \Wordlift\Client\Model\NetworkAccountInfo[]
      */
     public function getNetworks()
     {
@@ -623,7 +623,7 @@ class AccountInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets networks
      *
-     * @param \OpenAPI\Client\Model\NetworkAccountInfo[] $networks A list of connected Account Information
+     * @param \Wordlift\Client\Model\NetworkAccountInfo[] $networks A list of connected Account Information
      *
      * @return self
      */

@@ -1,4 +1,4 @@
-# OpenAPI\Client\OAuth2AuthorizedClientsApi
+# Wordlift\Client\OAuth2AuthorizedClientsApi
 
 All URIs are relative to https://api.wordlift.io, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to https://api.wordlift.io, except if the operation define
 ## `createOAuth2AuthorizedClient()`
 
 ```php
-createOAuth2AuthorizedClient($o_auth2_authorized_client_request): \OpenAPI\Client\Model\OAuth2AuthorizedClient
+createOAuth2AuthorizedClient($o_auth2_authorized_client_request): \Wordlift\Client\Model\OAuth2AuthorizedClient
 ```
 
 Create
@@ -29,16 +29,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OAuth2AuthorizedClientsApi(
+$apiInstance = new Wordlift\Client\Api\OAuth2AuthorizedClientsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$o_auth2_authorized_client_request = new \OpenAPI\Client\Model\OAuth2AuthorizedClientRequest(); // \OpenAPI\Client\Model\OAuth2AuthorizedClientRequest
+$o_auth2_authorized_client_request = new \Wordlift\Client\Model\OAuth2AuthorizedClientRequest(); // \Wordlift\Client\Model\OAuth2AuthorizedClientRequest
 
 try {
     $result = $apiInstance->createOAuth2AuthorizedClient($o_auth2_authorized_client_request);
@@ -52,11 +52,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **o_auth2_authorized_client_request** | [**\OpenAPI\Client\Model\OAuth2AuthorizedClientRequest**](../Model/OAuth2AuthorizedClientRequest.md)|  | |
+| **o_auth2_authorized_client_request** | [**\Wordlift\Client\Model\OAuth2AuthorizedClientRequest**](../Model/OAuth2AuthorizedClientRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OAuth2AuthorizedClient**](../Model/OAuth2AuthorizedClient.md)
+[**\Wordlift\Client\Model\OAuth2AuthorizedClient**](../Model/OAuth2AuthorizedClient.md)
 
 ### Authorization
 
@@ -89,10 +89,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OAuth2AuthorizedClientsApi(
+$apiInstance = new Wordlift\Client\Api\OAuth2AuthorizedClientsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -133,7 +133,7 @@ void (empty response body)
 ## `getOAuth2AuthorizedClient()`
 
 ```php
-getOAuth2AuthorizedClient($id): \OpenAPI\Client\Model\OAuth2AuthorizedClient
+getOAuth2AuthorizedClient($id): \Wordlift\Client\Model\OAuth2AuthorizedClient
 ```
 
 Get
@@ -148,10 +148,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OAuth2AuthorizedClientsApi(
+$apiInstance = new Wordlift\Client\Api\OAuth2AuthorizedClientsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -175,7 +175,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OAuth2AuthorizedClient**](../Model/OAuth2AuthorizedClient.md)
+[**\Wordlift\Client\Model\OAuth2AuthorizedClient**](../Model/OAuth2AuthorizedClient.md)
 
 ### Authorization
 
@@ -193,7 +193,7 @@ try {
 ## `listOAuth2AuthorizedClients()`
 
 ```php
-listOAuth2AuthorizedClients($cursor, $limit): \OpenAPI\Client\Model\PageOAuth2AuthorizedClient
+listOAuth2AuthorizedClients($cursor, $limit): \Wordlift\Client\Model\PageOAuth2AuthorizedClient
 ```
 
 List
@@ -208,10 +208,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OAuth2AuthorizedClientsApi(
+$apiInstance = new Wordlift\Client\Api\OAuth2AuthorizedClientsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -237,7 +237,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PageOAuth2AuthorizedClient**](../Model/PageOAuth2AuthorizedClient.md)
+[**\Wordlift\Client\Model\PageOAuth2AuthorizedClient**](../Model/PageOAuth2AuthorizedClient.md)
 
 ### Authorization
 
@@ -255,7 +255,7 @@ try {
 ## `updateOAuth2AuthorizedClient()`
 
 ```php
-updateOAuth2AuthorizedClient($id, $o_auth2_authorized_client_request): \OpenAPI\Client\Model\OAuth2AuthorizedClient
+updateOAuth2AuthorizedClient($id, $o_auth2_authorized_client_request): \Wordlift\Client\Model\OAuth2AuthorizedClient
 ```
 
 Update
@@ -270,17 +270,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OAuth2AuthorizedClientsApi(
+$apiInstance = new Wordlift\Client\Api\OAuth2AuthorizedClientsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | The Id
-$o_auth2_authorized_client_request = new \OpenAPI\Client\Model\OAuth2AuthorizedClientRequest(); // \OpenAPI\Client\Model\OAuth2AuthorizedClientRequest
+$o_auth2_authorized_client_request = new \Wordlift\Client\Model\OAuth2AuthorizedClientRequest(); // \Wordlift\Client\Model\OAuth2AuthorizedClientRequest
 
 try {
     $result = $apiInstance->updateOAuth2AuthorizedClient($id, $o_auth2_authorized_client_request);
@@ -295,11 +295,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| The Id | |
-| **o_auth2_authorized_client_request** | [**\OpenAPI\Client\Model\OAuth2AuthorizedClientRequest**](../Model/OAuth2AuthorizedClientRequest.md)|  | |
+| **o_auth2_authorized_client_request** | [**\Wordlift\Client\Model\OAuth2AuthorizedClientRequest**](../Model/OAuth2AuthorizedClientRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OAuth2AuthorizedClient**](../Model/OAuth2AuthorizedClient.md)
+[**\Wordlift\Client\Model\OAuth2AuthorizedClient**](../Model/OAuth2AuthorizedClient.md)
 
 ### Authorization
 

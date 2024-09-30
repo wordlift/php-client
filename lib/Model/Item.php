@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Wordlift\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Wordlift\Client\ObjectSerializer;
 
 /**
  * Item Class Doc Comment
  *
  * @category Class
  * @description An Internal Link request item.
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class Item implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'string',
-        'query' => '\OpenAPI\Client\Model\VectorSearchQueryRequest',
+        'query' => '\Wordlift\Client\Model\VectorSearchQueryRequest',
         'source_name' => 'string'
     ];
 
@@ -338,7 +338,7 @@ class Item implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets query
      *
-     * @return \OpenAPI\Client\Model\VectorSearchQueryRequest
+     * @return \Wordlift\Client\Model\VectorSearchQueryRequest
      */
     public function getQuery()
     {
@@ -348,7 +348,7 @@ class Item implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets query
      *
-     * @param \OpenAPI\Client\Model\VectorSearchQueryRequest $query query
+     * @param \Wordlift\Client\Model\VectorSearchQueryRequest $query query
      *
      * @return self
      */

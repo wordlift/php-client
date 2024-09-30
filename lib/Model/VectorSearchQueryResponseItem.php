@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Wordlift\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Wordlift\Client\ObjectSerializer;
 
 /**
  * VectorSearchQueryResponseItem Class Doc Comment
  *
  * @category Class
  * @description An array of objects.
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,10 +59,10 @@ class VectorSearchQueryResponseItem implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'fields' => 'array<string,\OpenAPI\Client\Model\VectorSearchQueryResponseItemFieldsValueInner[]>',
+        'fields' => 'array<string,\Wordlift\Client\Model\VectorSearchQueryResponseItemFieldsValueInner[]>',
         'id' => 'string',
         'iri' => 'string',
-        'metadata' => 'array<string,\OpenAPI\Client\Model\VectorSearchQueryResponseItemMetadataValue>',
+        'metadata' => 'array<string,\Wordlift\Client\Model\VectorSearchQueryResponseItemMetadataValue>',
         'node_id' => 'string',
         'score' => 'float',
         'text' => 'string'
@@ -342,7 +342,7 @@ class VectorSearchQueryResponseItem implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets fields
      *
-     * @return array<string,\OpenAPI\Client\Model\VectorSearchQueryResponseItemFieldsValueInner[]>|null
+     * @return array<string,\Wordlift\Client\Model\VectorSearchQueryResponseItemFieldsValueInner[]>|null
      */
     public function getFields()
     {
@@ -352,7 +352,7 @@ class VectorSearchQueryResponseItem implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets fields
      *
-     * @param array<string,\OpenAPI\Client\Model\VectorSearchQueryResponseItemFieldsValueInner[]>|null $fields Map of extra retrieved fields. The values of the requested fields are always returned in an array.If no value is found an empty array is returned.
+     * @param array<string,\Wordlift\Client\Model\VectorSearchQueryResponseItemFieldsValueInner[]>|null $fields Map of extra retrieved fields. The values of the requested fields are always returned in an array.If no value is found an empty array is returned.
      *
      * @return self
      */
@@ -425,7 +425,7 @@ class VectorSearchQueryResponseItem implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets metadata
      *
-     * @return array<string,\OpenAPI\Client\Model\VectorSearchQueryResponseItemMetadataValue>|null
+     * @return array<string,\Wordlift\Client\Model\VectorSearchQueryResponseItemMetadataValue>|null
      */
     public function getMetadata()
     {
@@ -435,7 +435,7 @@ class VectorSearchQueryResponseItem implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets metadata
      *
-     * @param array<string,\OpenAPI\Client\Model\VectorSearchQueryResponseItemMetadataValue>|null $metadata A nodes extra metadata.
+     * @param array<string,\Wordlift\Client\Model\VectorSearchQueryResponseItemMetadataValue>|null $metadata A nodes extra metadata.
      *
      * @return self
      */

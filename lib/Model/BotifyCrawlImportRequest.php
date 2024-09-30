@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Wordlift\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Wordlift\Client\ObjectSerializer;
 
 /**
  * BotifyCrawlImportRequest Class Doc Comment
  *
  * @category Class
  * @description The Botify Crawl Import request
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,7 +61,7 @@ class BotifyCrawlImportRequest implements ModelInterface, ArrayAccess, \JsonSeri
     protected static $openAPITypes = [
         'collection' => 'string',
         'description' => 'string[]',
-        'filters' => '\OpenAPI\Client\Model\Filter[]',
+        'filters' => '\Wordlift\Client\Model\Filter[]',
         'headline' => 'string',
         'request_embeddings' => 'string[]',
         'text' => 'string[]',
@@ -397,7 +397,7 @@ class BotifyCrawlImportRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets filters
      *
-     * @return \OpenAPI\Client\Model\Filter[]|null
+     * @return \Wordlift\Client\Model\Filter[]|null
      */
     public function getFilters()
     {
@@ -407,7 +407,7 @@ class BotifyCrawlImportRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets filters
      *
-     * @param \OpenAPI\Client\Model\Filter[]|null $filters filters
+     * @param \Wordlift\Client\Model\Filter[]|null $filters filters
      *
      * @return self
      */

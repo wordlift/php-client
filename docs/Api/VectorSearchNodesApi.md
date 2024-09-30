@@ -1,4 +1,4 @@
-# OpenAPI\Client\VectorSearchNodesApi
+# Wordlift\Client\VectorSearchNodesApi
 
 All URIs are relative to https://api.wordlift.io, except if the operation defines another base path.
 
@@ -23,18 +23,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Wordlift\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\VectorSearchNodesApi(
+$apiInstance = new Wordlift\Client\Api\VectorSearchNodesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$node_request = array(new \OpenAPI\Client\Model\NodeRequest()); // \OpenAPI\Client\Model\NodeRequest[]
+$node_request = array(new \Wordlift\Client\Model\NodeRequest()); // \Wordlift\Client\Model\NodeRequest[]
 
 try {
     $apiInstance->updateNodesCollection($node_request);
@@ -47,7 +47,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **node_request** | [**\OpenAPI\Client\Model\NodeRequest[]**](../Model/NodeRequest.md)|  | |
+| **node_request** | [**\Wordlift\Client\Model\NodeRequest[]**](../Model/NodeRequest.md)|  | |
 
 ### Return type
 

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,7 +27,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace OpenAPI\Client\Test\Model;
+namespace Wordlift\Client\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -36,7 +36,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description Map of extra retrieved fields. The values of the requested fields are always returned in an array.If no value is found an empty array is returned.
- * @package     OpenAPI\Client
+ * @package     Wordlift\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */

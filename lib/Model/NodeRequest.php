@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Wordlift\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Wordlift\Client\ObjectSerializer;
 
 /**
  * NodeRequest Class Doc Comment
  *
  * @category Class
  * @description A node request.
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,7 +61,7 @@ class NodeRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'embeddings' => 'float[]',
         'entity_id' => 'string',
-        'metadata' => 'array<string,\OpenAPI\Client\Model\NodeRequestMetadataValue>',
+        'metadata' => 'array<string,\Wordlift\Client\Model\NodeRequestMetadataValue>',
         'node_id' => 'string',
         'text' => 'string'
     ];
@@ -382,7 +382,7 @@ class NodeRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets metadata
      *
-     * @return array<string,\OpenAPI\Client\Model\NodeRequestMetadataValue>|null
+     * @return array<string,\Wordlift\Client\Model\NodeRequestMetadataValue>|null
      */
     public function getMetadata()
     {
@@ -392,7 +392,7 @@ class NodeRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets metadata
      *
-     * @param array<string,\OpenAPI\Client\Model\NodeRequestMetadataValue>|null $metadata A map of metadata properties.
+     * @param array<string,\Wordlift\Client\Model\NodeRequestMetadataValue>|null $metadata A map of metadata properties.
      *
      * @return self
      */

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Wordlift\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Wordlift\Client\ApiException;
+use Wordlift\Client\Configuration;
+use Wordlift\Client\HeaderSelector;
+use Wordlift\Client\ObjectSerializer;
 
 /**
  * RedeemCodesApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -128,12 +128,12 @@ class RedeemCodesApi
      *
      * Redeem the provided code and get a key
      *
-     * @param  \OpenAPI\Client\Model\Request $request request (required)
+     * @param  \Wordlift\Client\Model\Request $request request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['redeemCode'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Response|\OpenAPI\Client\Model\ProblemDetail|\OpenAPI\Client\Model\ProblemDetail|\OpenAPI\Client\Model\ProblemDetail
+     * @return \Wordlift\Client\Model\Response|\Wordlift\Client\Model\ProblemDetail|\Wordlift\Client\Model\ProblemDetail|\Wordlift\Client\Model\ProblemDetail
      */
     public function redeemCode($request, string $contentType = self::contentTypes['redeemCode'][0])
     {
@@ -146,12 +146,12 @@ class RedeemCodesApi
      *
      * Redeem the provided code and get a key
      *
-     * @param  \OpenAPI\Client\Model\Request $request (required)
+     * @param  \Wordlift\Client\Model\Request $request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['redeemCode'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Response|\OpenAPI\Client\Model\ProblemDetail|\OpenAPI\Client\Model\ProblemDetail|\OpenAPI\Client\Model\ProblemDetail, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Wordlift\Client\Model\Response|\Wordlift\Client\Model\ProblemDetail|\Wordlift\Client\Model\ProblemDetail|\Wordlift\Client\Model\ProblemDetail, HTTP status code, HTTP response headers (array of strings)
      */
     public function redeemCodeWithHttpInfo($request, string $contentType = self::contentTypes['redeemCode'][0])
     {
@@ -194,11 +194,11 @@ class RedeemCodesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Response' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Response' !== 'string') {
+                        if ('\Wordlift\Client\Model\Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -216,16 +216,16 @@ class RedeemCodesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Response', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\ProblemDetail' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\ProblemDetail' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ProblemDetail' !== 'string') {
+                        if ('\Wordlift\Client\Model\ProblemDetail' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -243,16 +243,16 @@ class RedeemCodesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ProblemDetail', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\ProblemDetail', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 409:
-                    if ('\OpenAPI\Client\Model\ProblemDetail' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\ProblemDetail' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ProblemDetail' !== 'string') {
+                        if ('\Wordlift\Client\Model\ProblemDetail' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -270,16 +270,16 @@ class RedeemCodesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ProblemDetail', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\ProblemDetail', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ProblemDetail' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\ProblemDetail' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ProblemDetail' !== 'string') {
+                        if ('\Wordlift\Client\Model\ProblemDetail' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -297,13 +297,13 @@ class RedeemCodesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ProblemDetail', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\ProblemDetail', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\Response';
+            $returnType = '\Wordlift\Client\Model\Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -336,7 +336,7 @@ class RedeemCodesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Response',
+                        '\Wordlift\Client\Model\Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -344,7 +344,7 @@ class RedeemCodesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ProblemDetail',
+                        '\Wordlift\Client\Model\ProblemDetail',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -352,7 +352,7 @@ class RedeemCodesApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ProblemDetail',
+                        '\Wordlift\Client\Model\ProblemDetail',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -360,7 +360,7 @@ class RedeemCodesApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ProblemDetail',
+                        '\Wordlift\Client\Model\ProblemDetail',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -375,7 +375,7 @@ class RedeemCodesApi
      *
      * Redeem the provided code and get a key
      *
-     * @param  \OpenAPI\Client\Model\Request $request (required)
+     * @param  \Wordlift\Client\Model\Request $request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['redeemCode'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -396,7 +396,7 @@ class RedeemCodesApi
      *
      * Redeem the provided code and get a key
      *
-     * @param  \OpenAPI\Client\Model\Request $request (required)
+     * @param  \Wordlift\Client\Model\Request $request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['redeemCode'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -404,7 +404,7 @@ class RedeemCodesApi
      */
     public function redeemCodeAsyncWithHttpInfo($request, string $contentType = self::contentTypes['redeemCode'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Response';
+        $returnType = '\Wordlift\Client\Model\Response';
         $request = $this->redeemCodeRequest($request, $contentType);
 
         return $this->client
@@ -446,7 +446,7 @@ class RedeemCodesApi
     /**
      * Create request for operation 'redeemCode'
      *
-     * @param  \OpenAPI\Client\Model\Request $request (required)
+     * @param  \Wordlift\Client\Model\Request $request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['redeemCode'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

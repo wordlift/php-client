@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Wordlift\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Wordlift\Client\ApiException;
+use Wordlift\Client\Configuration;
+use Wordlift\Client\HeaderSelector;
+use Wordlift\Client\ObjectSerializer;
 
 /**
  * MerchantSyncsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -137,9 +137,9 @@ class MerchantSyncsApi
      * @param  int $merchant_id The Merchant&#39;s &#x60;id&#x60; (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSync'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MerchantSync|\OpenAPI\Client\Model\ProblemDetail
+     * @return \Wordlift\Client\Model\MerchantSync|\Wordlift\Client\Model\ProblemDetail
      */
     public function createSync($merchant_id, string $contentType = self::contentTypes['createSync'][0])
     {
@@ -155,9 +155,9 @@ class MerchantSyncsApi
      * @param  int $merchant_id The Merchant&#39;s &#x60;id&#x60; (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createSync'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MerchantSync|\OpenAPI\Client\Model\ProblemDetail, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Wordlift\Client\Model\MerchantSync|\Wordlift\Client\Model\ProblemDetail, HTTP status code, HTTP response headers (array of strings)
      */
     public function createSyncWithHttpInfo($merchant_id, string $contentType = self::contentTypes['createSync'][0])
     {
@@ -200,11 +200,11 @@ class MerchantSyncsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MerchantSync' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\MerchantSync' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MerchantSync' !== 'string') {
+                        if ('\Wordlift\Client\Model\MerchantSync' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -222,16 +222,16 @@ class MerchantSyncsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MerchantSync', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\MerchantSync', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ProblemDetail' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\ProblemDetail' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ProblemDetail' !== 'string') {
+                        if ('\Wordlift\Client\Model\ProblemDetail' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -249,13 +249,13 @@ class MerchantSyncsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ProblemDetail', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\ProblemDetail', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MerchantSync';
+            $returnType = '\Wordlift\Client\Model\MerchantSync';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -288,7 +288,7 @@ class MerchantSyncsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MerchantSync',
+                        '\Wordlift\Client\Model\MerchantSync',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -296,7 +296,7 @@ class MerchantSyncsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ProblemDetail',
+                        '\Wordlift\Client\Model\ProblemDetail',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -340,7 +340,7 @@ class MerchantSyncsApi
      */
     public function createSyncAsyncWithHttpInfo($merchant_id, string $contentType = self::contentTypes['createSync'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\MerchantSync';
+        $returnType = '\Wordlift\Client\Model\MerchantSync';
         $request = $this->createSyncRequest($merchant_id, $contentType);
 
         return $this->client
@@ -484,9 +484,9 @@ class MerchantSyncsApi
      * @param  int $id The Merchant Sync &#x60;id&#x60;. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMerchantSync'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MerchantSync
+     * @return \Wordlift\Client\Model\MerchantSync
      */
     public function getMerchantSync($merchant_id, $id, string $contentType = self::contentTypes['getMerchantSync'][0])
     {
@@ -503,9 +503,9 @@ class MerchantSyncsApi
      * @param  int $id The Merchant Sync &#x60;id&#x60;. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMerchantSync'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MerchantSync, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Wordlift\Client\Model\MerchantSync, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMerchantSyncWithHttpInfo($merchant_id, $id, string $contentType = self::contentTypes['getMerchantSync'][0])
     {
@@ -548,11 +548,11 @@ class MerchantSyncsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MerchantSync' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\MerchantSync' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MerchantSync' !== 'string') {
+                        if ('\Wordlift\Client\Model\MerchantSync' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -570,13 +570,13 @@ class MerchantSyncsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MerchantSync', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\MerchantSync', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MerchantSync';
+            $returnType = '\Wordlift\Client\Model\MerchantSync';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -609,7 +609,7 @@ class MerchantSyncsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MerchantSync',
+                        '\Wordlift\Client\Model\MerchantSync',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -655,7 +655,7 @@ class MerchantSyncsApi
      */
     public function getMerchantSyncAsyncWithHttpInfo($merchant_id, $id, string $contentType = self::contentTypes['getMerchantSync'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\MerchantSync';
+        $returnType = '\Wordlift\Client\Model\MerchantSync';
         $request = $this->getMerchantSyncRequest($merchant_id, $id, $contentType);
 
         return $this->client
@@ -817,9 +817,9 @@ class MerchantSyncsApi
      * @param  string $sort The sorting, &#x60;+id&#x60; or &#x60;-id&#x60; (optional, default to '+id')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listMerchantSyncs'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PageMerchantSync
+     * @return \Wordlift\Client\Model\PageMerchantSync
      */
     public function listMerchantSyncs($merchant_id, $cursor = null, $limit = 10, $sort = '+id', string $contentType = self::contentTypes['listMerchantSyncs'][0])
     {
@@ -838,9 +838,9 @@ class MerchantSyncsApi
      * @param  string $sort The sorting, &#x60;+id&#x60; or &#x60;-id&#x60; (optional, default to '+id')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listMerchantSyncs'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PageMerchantSync, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Wordlift\Client\Model\PageMerchantSync, HTTP status code, HTTP response headers (array of strings)
      */
     public function listMerchantSyncsWithHttpInfo($merchant_id, $cursor = null, $limit = 10, $sort = '+id', string $contentType = self::contentTypes['listMerchantSyncs'][0])
     {
@@ -883,11 +883,11 @@ class MerchantSyncsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PageMerchantSync' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\PageMerchantSync' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PageMerchantSync' !== 'string') {
+                        if ('\Wordlift\Client\Model\PageMerchantSync' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -905,13 +905,13 @@ class MerchantSyncsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PageMerchantSync', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\PageMerchantSync', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PageMerchantSync';
+            $returnType = '\Wordlift\Client\Model\PageMerchantSync';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -944,7 +944,7 @@ class MerchantSyncsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PageMerchantSync',
+                        '\Wordlift\Client\Model\PageMerchantSync',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -994,7 +994,7 @@ class MerchantSyncsApi
      */
     public function listMerchantSyncsAsyncWithHttpInfo($merchant_id, $cursor = null, $limit = 10, $sort = '+id', string $contentType = self::contentTypes['listMerchantSyncs'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PageMerchantSync';
+        $returnType = '\Wordlift\Client\Model\PageMerchantSync';
         $request = $this->listMerchantSyncsRequest($merchant_id, $cursor, $limit, $sort, $contentType);
 
         return $this->client

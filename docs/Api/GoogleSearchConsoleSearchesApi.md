@@ -1,4 +1,4 @@
-# OpenAPI\Client\GoogleSearchConsoleSearchesApi
+# Wordlift\Client\GoogleSearchConsoleSearchesApi
 
 All URIs are relative to https://api.wordlift.io, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to https://api.wordlift.io, except if the operation define
 ## `listWebsiteSearch1()`
 
 ```php
-listWebsiteSearch1($since, $until, $dimensions, $cursor, $data_state, $limit): \OpenAPI\Client\Model\PageWebsiteSearch
+listWebsiteSearch1($since, $until, $dimensions, $cursor, $data_state, $limit): \Wordlift\Client\Model\PageWebsiteSearch
 ```
 
 List Website Search data
@@ -25,12 +25,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Wordlift\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\GoogleSearchConsoleSearchesApi(
+$apiInstance = new Wordlift\Client\Api\GoogleSearchConsoleSearchesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -64,7 +64,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PageWebsiteSearch**](../Model/PageWebsiteSearch.md)
+[**\Wordlift\Client\Model\PageWebsiteSearch**](../Model/PageWebsiteSearch.md)
 
 ### Authorization
 

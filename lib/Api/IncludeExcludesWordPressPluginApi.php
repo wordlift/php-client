@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Wordlift\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Wordlift\Client\ApiException;
+use Wordlift\Client\Configuration;
+use Wordlift\Client\HeaderSelector;
+use Wordlift\Client\ObjectSerializer;
 
 /**
  * IncludeExcludesWordPressPluginApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -131,12 +131,12 @@ class IncludeExcludesWordPressPluginApi
      *
      * List
      *
-     * @param  \OpenAPI\Client\Model\Account $account account (required)
+     * @param  \Wordlift\Client\Model\Account $account account (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listIncludeExcludes'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\IncludeExclude[]|\OpenAPI\Client\Model\IncludeExclude[]|\OpenAPI\Client\Model\IncludeExclude[]
+     * @return \Wordlift\Client\Model\IncludeExclude[]|\Wordlift\Client\Model\IncludeExclude[]|\Wordlift\Client\Model\IncludeExclude[]
      */
     public function listIncludeExcludes($account, string $contentType = self::contentTypes['listIncludeExcludes'][0])
     {
@@ -149,12 +149,12 @@ class IncludeExcludesWordPressPluginApi
      *
      * List
      *
-     * @param  \OpenAPI\Client\Model\Account $account (required)
+     * @param  \Wordlift\Client\Model\Account $account (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listIncludeExcludes'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\IncludeExclude[]|\OpenAPI\Client\Model\IncludeExclude[]|\OpenAPI\Client\Model\IncludeExclude[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Wordlift\Client\Model\IncludeExclude[]|\Wordlift\Client\Model\IncludeExclude[]|\Wordlift\Client\Model\IncludeExclude[], HTTP status code, HTTP response headers (array of strings)
      */
     public function listIncludeExcludesWithHttpInfo($account, string $contentType = self::contentTypes['listIncludeExcludes'][0])
     {
@@ -197,11 +197,11 @@ class IncludeExcludesWordPressPluginApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\IncludeExclude[]' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\IncludeExclude[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\IncludeExclude[]' !== 'string') {
+                        if ('\Wordlift\Client\Model\IncludeExclude[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -219,16 +219,16 @@ class IncludeExcludesWordPressPluginApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\IncludeExclude[]', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\IncludeExclude[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\OpenAPI\Client\Model\IncludeExclude[]' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\IncludeExclude[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\IncludeExclude[]' !== 'string') {
+                        if ('\Wordlift\Client\Model\IncludeExclude[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -246,16 +246,16 @@ class IncludeExcludesWordPressPluginApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\IncludeExclude[]', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\IncludeExclude[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\IncludeExclude[]' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\IncludeExclude[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\IncludeExclude[]' !== 'string') {
+                        if ('\Wordlift\Client\Model\IncludeExclude[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -273,13 +273,13 @@ class IncludeExcludesWordPressPluginApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\IncludeExclude[]', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\IncludeExclude[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\IncludeExclude[]';
+            $returnType = '\Wordlift\Client\Model\IncludeExclude[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -312,7 +312,7 @@ class IncludeExcludesWordPressPluginApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\IncludeExclude[]',
+                        '\Wordlift\Client\Model\IncludeExclude[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -320,7 +320,7 @@ class IncludeExcludesWordPressPluginApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\IncludeExclude[]',
+                        '\Wordlift\Client\Model\IncludeExclude[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -328,7 +328,7 @@ class IncludeExcludesWordPressPluginApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\IncludeExclude[]',
+                        '\Wordlift\Client\Model\IncludeExclude[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -343,7 +343,7 @@ class IncludeExcludesWordPressPluginApi
      *
      * List
      *
-     * @param  \OpenAPI\Client\Model\Account $account (required)
+     * @param  \Wordlift\Client\Model\Account $account (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listIncludeExcludes'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -364,7 +364,7 @@ class IncludeExcludesWordPressPluginApi
      *
      * List
      *
-     * @param  \OpenAPI\Client\Model\Account $account (required)
+     * @param  \Wordlift\Client\Model\Account $account (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listIncludeExcludes'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -372,7 +372,7 @@ class IncludeExcludesWordPressPluginApi
      */
     public function listIncludeExcludesAsyncWithHttpInfo($account, string $contentType = self::contentTypes['listIncludeExcludes'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\IncludeExclude[]';
+        $returnType = '\Wordlift\Client\Model\IncludeExclude[]';
         $request = $this->listIncludeExcludesRequest($account, $contentType);
 
         return $this->client
@@ -414,7 +414,7 @@ class IncludeExcludesWordPressPluginApi
     /**
      * Create request for operation 'listIncludeExcludes'
      *
-     * @param  \OpenAPI\Client\Model\Account $account (required)
+     * @param  \Wordlift\Client\Model\Account $account (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listIncludeExcludes'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -509,13 +509,13 @@ class IncludeExcludesWordPressPluginApi
      *
      * Update
      *
-     * @param  \OpenAPI\Client\Model\Account $account account (required)
-     * @param  \OpenAPI\Client\Model\IncludeExcludeRequest[] $include_exclude_request include_exclude_request (required)
+     * @param  \Wordlift\Client\Model\Account $account account (required)
+     * @param  \Wordlift\Client\Model\IncludeExcludeRequest[] $include_exclude_request include_exclude_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateIncludeExcludes'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\IncludeExclude[]|\OpenAPI\Client\Model\IncludeExclude[]|\OpenAPI\Client\Model\IncludeExclude[]
+     * @return \Wordlift\Client\Model\IncludeExclude[]|\Wordlift\Client\Model\IncludeExclude[]|\Wordlift\Client\Model\IncludeExclude[]
      */
     public function updateIncludeExcludes($account, $include_exclude_request, string $contentType = self::contentTypes['updateIncludeExcludes'][0])
     {
@@ -528,13 +528,13 @@ class IncludeExcludesWordPressPluginApi
      *
      * Update
      *
-     * @param  \OpenAPI\Client\Model\Account $account (required)
-     * @param  \OpenAPI\Client\Model\IncludeExcludeRequest[] $include_exclude_request (required)
+     * @param  \Wordlift\Client\Model\Account $account (required)
+     * @param  \Wordlift\Client\Model\IncludeExcludeRequest[] $include_exclude_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateIncludeExcludes'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\IncludeExclude[]|\OpenAPI\Client\Model\IncludeExclude[]|\OpenAPI\Client\Model\IncludeExclude[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Wordlift\Client\Model\IncludeExclude[]|\Wordlift\Client\Model\IncludeExclude[]|\Wordlift\Client\Model\IncludeExclude[], HTTP status code, HTTP response headers (array of strings)
      */
     public function updateIncludeExcludesWithHttpInfo($account, $include_exclude_request, string $contentType = self::contentTypes['updateIncludeExcludes'][0])
     {
@@ -577,11 +577,11 @@ class IncludeExcludesWordPressPluginApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\IncludeExclude[]' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\IncludeExclude[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\IncludeExclude[]' !== 'string') {
+                        if ('\Wordlift\Client\Model\IncludeExclude[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -599,16 +599,16 @@ class IncludeExcludesWordPressPluginApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\IncludeExclude[]', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\IncludeExclude[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\OpenAPI\Client\Model\IncludeExclude[]' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\IncludeExclude[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\IncludeExclude[]' !== 'string') {
+                        if ('\Wordlift\Client\Model\IncludeExclude[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -626,16 +626,16 @@ class IncludeExcludesWordPressPluginApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\IncludeExclude[]', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\IncludeExclude[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\IncludeExclude[]' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\IncludeExclude[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\IncludeExclude[]' !== 'string') {
+                        if ('\Wordlift\Client\Model\IncludeExclude[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -653,13 +653,13 @@ class IncludeExcludesWordPressPluginApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\IncludeExclude[]', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\IncludeExclude[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\IncludeExclude[]';
+            $returnType = '\Wordlift\Client\Model\IncludeExclude[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -692,7 +692,7 @@ class IncludeExcludesWordPressPluginApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\IncludeExclude[]',
+                        '\Wordlift\Client\Model\IncludeExclude[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -700,7 +700,7 @@ class IncludeExcludesWordPressPluginApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\IncludeExclude[]',
+                        '\Wordlift\Client\Model\IncludeExclude[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -708,7 +708,7 @@ class IncludeExcludesWordPressPluginApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\IncludeExclude[]',
+                        '\Wordlift\Client\Model\IncludeExclude[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -723,8 +723,8 @@ class IncludeExcludesWordPressPluginApi
      *
      * Update
      *
-     * @param  \OpenAPI\Client\Model\Account $account (required)
-     * @param  \OpenAPI\Client\Model\IncludeExcludeRequest[] $include_exclude_request (required)
+     * @param  \Wordlift\Client\Model\Account $account (required)
+     * @param  \Wordlift\Client\Model\IncludeExcludeRequest[] $include_exclude_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateIncludeExcludes'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -745,8 +745,8 @@ class IncludeExcludesWordPressPluginApi
      *
      * Update
      *
-     * @param  \OpenAPI\Client\Model\Account $account (required)
-     * @param  \OpenAPI\Client\Model\IncludeExcludeRequest[] $include_exclude_request (required)
+     * @param  \Wordlift\Client\Model\Account $account (required)
+     * @param  \Wordlift\Client\Model\IncludeExcludeRequest[] $include_exclude_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateIncludeExcludes'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -754,7 +754,7 @@ class IncludeExcludesWordPressPluginApi
      */
     public function updateIncludeExcludesAsyncWithHttpInfo($account, $include_exclude_request, string $contentType = self::contentTypes['updateIncludeExcludes'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\IncludeExclude[]';
+        $returnType = '\Wordlift\Client\Model\IncludeExclude[]';
         $request = $this->updateIncludeExcludesRequest($account, $include_exclude_request, $contentType);
 
         return $this->client
@@ -796,8 +796,8 @@ class IncludeExcludesWordPressPluginApi
     /**
      * Create request for operation 'updateIncludeExcludes'
      *
-     * @param  \OpenAPI\Client\Model\Account $account (required)
-     * @param  \OpenAPI\Client\Model\IncludeExcludeRequest[] $include_exclude_request (required)
+     * @param  \Wordlift\Client\Model\Account $account (required)
+     * @param  \Wordlift\Client\Model\IncludeExcludeRequest[] $include_exclude_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateIncludeExcludes'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

@@ -1,4 +1,4 @@
-# OpenAPI\Client\EmbeddingApi
+# Wordlift\Client\EmbeddingApi
 
 All URIs are relative to https://api.wordlift.io, except if the operation defines another base path.
 
@@ -25,18 +25,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Wordlift\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\EmbeddingApi(
+$apiInstance = new Wordlift\Client\Api\EmbeddingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$kg_embedding_request = new \OpenAPI\Client\Model\KgEmbeddingRequest(); // \OpenAPI\Client\Model\KgEmbeddingRequest
+$kg_embedding_request = new \Wordlift\Client\Model\KgEmbeddingRequest(); // \Wordlift\Client\Model\KgEmbeddingRequest
 
 try {
     $result = $apiInstance->createEmbedding($kg_embedding_request);
@@ -50,7 +50,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **kg_embedding_request** | [**\OpenAPI\Client\Model\KgEmbeddingRequest**](../Model/KgEmbeddingRequest.md)|  | |
+| **kg_embedding_request** | [**\Wordlift\Client\Model\KgEmbeddingRequest**](../Model/KgEmbeddingRequest.md)|  | |
 
 ### Return type
 

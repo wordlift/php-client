@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **first** | **string** | The link to the first page. |
-**items** | [**\OpenAPI\Client\Model\PlatformLimit[]**](PlatformLimit.md) | An array of objects. |
+**items** | [**\Wordlift\Client\Model\PlatformLimit[]**](PlatformLimit.md) | An array of objects. |
 **last** | **string** | The link to the last page. |
 **next** | **string** | The link to the next page or &#x60;null&#x60; if there&#39;s no page. |
 **prev** | **string** | The link to the previous page or &#x60;null&#x60; if there&#39;s no page. |

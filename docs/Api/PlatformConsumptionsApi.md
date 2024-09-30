@@ -1,4 +1,4 @@
-# OpenAPI\Client\PlatformConsumptionsApi
+# Wordlift\Client\PlatformConsumptionsApi
 
 All URIs are relative to https://api.wordlift.io, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://api.wordlift.io, except if the operation define
 ## `createOrUpdateMyPlatformConsumption()`
 
 ```php
-createOrUpdateMyPlatformConsumption($applies_to, $consumption_to_add): \OpenAPI\Client\Model\PageWithLimits
+createOrUpdateMyPlatformConsumption($applies_to, $consumption_to_add): \Wordlift\Client\Model\PageWithLimits
 ```
 
 Create or update the Platform Consumption
@@ -26,15 +26,15 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Wordlift\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\PlatformConsumptionsApi(
+$apiInstance = new Wordlift\Client\Api\PlatformConsumptionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -60,7 +60,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PageWithLimits**](../Model/PageWithLimits.md)
+[**\Wordlift\Client\Model\PageWithLimits**](../Model/PageWithLimits.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ try {
 ## `getMyPlatformConsumption()`
 
 ```php
-getMyPlatformConsumption($applies_to, $include_subscription, $include_limit): \OpenAPI\Client\Model\PageWithLimits
+getMyPlatformConsumption($applies_to, $include_subscription, $include_limit): \Wordlift\Client\Model\PageWithLimits
 ```
 
 Get the Platform Consumption
@@ -93,15 +93,15 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Wordlift\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\PlatformConsumptionsApi(
+$apiInstance = new Wordlift\Client\Api\PlatformConsumptionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -129,7 +129,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PageWithLimits**](../Model/PageWithLimits.md)
+[**\Wordlift\Client\Model\PageWithLimits**](../Model/PageWithLimits.md)
 
 ### Authorization
 

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Wordlift\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Wordlift\Client\ApiException;
+use Wordlift\Client\Configuration;
+use Wordlift\Client\HeaderSelector;
+use Wordlift\Client\ObjectSerializer;
 
 /**
  * BotifyCrawlImportsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -128,12 +128,12 @@ class BotifyCrawlImportsApi
      *
      * Create
      *
-     * @param  \OpenAPI\Client\Model\BotifyCrawlImportRequest $botify_crawl_import_request botify_crawl_import_request (required)
+     * @param  \Wordlift\Client\Model\BotifyCrawlImportRequest $botify_crawl_import_request botify_crawl_import_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createBotifyCrawlImport'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\WebPage[]
+     * @return \Wordlift\Client\Model\WebPage[]
      */
     public function createBotifyCrawlImport($botify_crawl_import_request, string $contentType = self::contentTypes['createBotifyCrawlImport'][0])
     {
@@ -146,12 +146,12 @@ class BotifyCrawlImportsApi
      *
      * Create
      *
-     * @param  \OpenAPI\Client\Model\BotifyCrawlImportRequest $botify_crawl_import_request (required)
+     * @param  \Wordlift\Client\Model\BotifyCrawlImportRequest $botify_crawl_import_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createBotifyCrawlImport'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\WebPage[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Wordlift\Client\Model\WebPage[], HTTP status code, HTTP response headers (array of strings)
      */
     public function createBotifyCrawlImportWithHttpInfo($botify_crawl_import_request, string $contentType = self::contentTypes['createBotifyCrawlImport'][0])
     {
@@ -194,11 +194,11 @@ class BotifyCrawlImportsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\WebPage[]' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\WebPage[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\WebPage[]' !== 'string') {
+                        if ('\Wordlift\Client\Model\WebPage[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -216,13 +216,13 @@ class BotifyCrawlImportsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\WebPage[]', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\WebPage[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\WebPage[]';
+            $returnType = '\Wordlift\Client\Model\WebPage[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -255,7 +255,7 @@ class BotifyCrawlImportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\WebPage[]',
+                        '\Wordlift\Client\Model\WebPage[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -270,7 +270,7 @@ class BotifyCrawlImportsApi
      *
      * Create
      *
-     * @param  \OpenAPI\Client\Model\BotifyCrawlImportRequest $botify_crawl_import_request (required)
+     * @param  \Wordlift\Client\Model\BotifyCrawlImportRequest $botify_crawl_import_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createBotifyCrawlImport'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -291,7 +291,7 @@ class BotifyCrawlImportsApi
      *
      * Create
      *
-     * @param  \OpenAPI\Client\Model\BotifyCrawlImportRequest $botify_crawl_import_request (required)
+     * @param  \Wordlift\Client\Model\BotifyCrawlImportRequest $botify_crawl_import_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createBotifyCrawlImport'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -299,7 +299,7 @@ class BotifyCrawlImportsApi
      */
     public function createBotifyCrawlImportAsyncWithHttpInfo($botify_crawl_import_request, string $contentType = self::contentTypes['createBotifyCrawlImport'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\WebPage[]';
+        $returnType = '\Wordlift\Client\Model\WebPage[]';
         $request = $this->createBotifyCrawlImportRequest($botify_crawl_import_request, $contentType);
 
         return $this->client
@@ -341,7 +341,7 @@ class BotifyCrawlImportsApi
     /**
      * Create request for operation 'createBotifyCrawlImport'
      *
-     * @param  \OpenAPI\Client\Model\BotifyCrawlImportRequest $botify_crawl_import_request (required)
+     * @param  \Wordlift\Client\Model\BotifyCrawlImportRequest $botify_crawl_import_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createBotifyCrawlImport'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

@@ -1,4 +1,4 @@
-# OpenAPI\Client\AddOnsApi
+# Wordlift\Client\AddOnsApi
 
 All URIs are relative to https://api.wordlift.io, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to https://api.wordlift.io, except if the operation define
 ## `listConfigurations()`
 
 ```php
-listConfigurations($token, $key, $limit): \OpenAPI\Client\Model\PageAddOnConfiguration
+listConfigurations($token, $key, $limit): \Wordlift\Client\Model\PageAddOnConfiguration
 ```
 
 List
@@ -25,7 +25,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AddOnsApi(
+$apiInstance = new Wordlift\Client\Api\AddOnsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -52,7 +52,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PageAddOnConfiguration**](../Model/PageAddOnConfiguration.md)
+[**\Wordlift\Client\Model\PageAddOnConfiguration**](../Model/PageAddOnConfiguration.md)
 
 ### Authorization
 

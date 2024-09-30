@@ -1,4 +1,4 @@
-# OpenAPI\Client\GoogleSearchConsoleOAuth2Api
+# Wordlift\Client\GoogleSearchConsoleOAuth2Api
 
 All URIs are relative to https://api.wordlift.io, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://api.wordlift.io, except if the operation define
 ## `createAuthCodeExchange()`
 
 ```php
-createAuthCodeExchange($exchange_auth_code_request): \OpenAPI\Client\Model\ExchangeAuthCodeResponse
+createAuthCodeExchange($exchange_auth_code_request): \Wordlift\Client\Model\ExchangeAuthCodeResponse
 ```
 
 Get an Access Code
@@ -26,18 +26,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Wordlift\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\GoogleSearchConsoleOAuth2Api(
+$apiInstance = new Wordlift\Client\Api\GoogleSearchConsoleOAuth2Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$exchange_auth_code_request = new \OpenAPI\Client\Model\ExchangeAuthCodeRequest(); // \OpenAPI\Client\Model\ExchangeAuthCodeRequest
+$exchange_auth_code_request = new \Wordlift\Client\Model\ExchangeAuthCodeRequest(); // \Wordlift\Client\Model\ExchangeAuthCodeRequest
 
 try {
     $result = $apiInstance->createAuthCodeExchange($exchange_auth_code_request);
@@ -51,11 +51,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **exchange_auth_code_request** | [**\OpenAPI\Client\Model\ExchangeAuthCodeRequest**](../Model/ExchangeAuthCodeRequest.md)|  | |
+| **exchange_auth_code_request** | [**\Wordlift\Client\Model\ExchangeAuthCodeRequest**](../Model/ExchangeAuthCodeRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ExchangeAuthCodeResponse**](../Model/ExchangeAuthCodeResponse.md)
+[**\Wordlift\Client\Model\ExchangeAuthCodeResponse**](../Model/ExchangeAuthCodeResponse.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ try {
 ## `createAuthorizeUri()`
 
 ```php
-createAuthorizeUri($build_authorize_uri_request): \OpenAPI\Client\Model\BuildAuthorizeUriResponse
+createAuthorizeUri($build_authorize_uri_request): \Wordlift\Client\Model\BuildAuthorizeUriResponse
 ```
 
 Create an Authorization URI
@@ -88,18 +88,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Wordlift\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\GoogleSearchConsoleOAuth2Api(
+$apiInstance = new Wordlift\Client\Api\GoogleSearchConsoleOAuth2Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$build_authorize_uri_request = new \OpenAPI\Client\Model\BuildAuthorizeUriRequest(); // \OpenAPI\Client\Model\BuildAuthorizeUriRequest
+$build_authorize_uri_request = new \Wordlift\Client\Model\BuildAuthorizeUriRequest(); // \Wordlift\Client\Model\BuildAuthorizeUriRequest
 
 try {
     $result = $apiInstance->createAuthorizeUri($build_authorize_uri_request);
@@ -113,11 +113,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **build_authorize_uri_request** | [**\OpenAPI\Client\Model\BuildAuthorizeUriRequest**](../Model/BuildAuthorizeUriRequest.md)|  | |
+| **build_authorize_uri_request** | [**\Wordlift\Client\Model\BuildAuthorizeUriRequest**](../Model/BuildAuthorizeUriRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\BuildAuthorizeUriResponse**](../Model/BuildAuthorizeUriResponse.md)
+[**\Wordlift\Client\Model\BuildAuthorizeUriResponse**](../Model/BuildAuthorizeUriResponse.md)
 
 ### Authorization
 

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client\Model
+ * @package  Wordlift\Client\Model
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,12 +27,12 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Wordlift\Client\Model;
 
 /**
  * Interface abstracting model access.
  *
- * @package OpenAPI\Client\Model
+ * @package Wordlift\Client\Model
  * @author  OpenAPI Generator team
  */
 interface ModelInterface

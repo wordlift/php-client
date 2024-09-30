@@ -1,4 +1,4 @@
-# OpenAPI\Client\GoogleMerchantsApi
+# Wordlift\Client\GoogleMerchantsApi
 
 All URIs are relative to https://api.wordlift.io, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to https://api.wordlift.io, except if the operation define
 ## `listGoogleMerchants()`
 
 ```php
-listGoogleMerchants($google_access_token): \OpenAPI\Client\Model\PageMerchantEntry
+listGoogleMerchants($google_access_token): \Wordlift\Client\Model\PageMerchantEntry
 ```
 
 List
@@ -25,10 +25,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\GoogleMerchantsApi(
+$apiInstance = new Wordlift\Client\Api\GoogleMerchantsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -52,7 +52,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PageMerchantEntry**](../Model/PageMerchantEntry.md)
+[**\Wordlift\Client\Model\PageMerchantEntry**](../Model/PageMerchantEntry.md)
 
 ### Authorization
 

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Wordlift\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Wordlift\Client\ApiException;
+use Wordlift\Client\Configuration;
+use Wordlift\Client\HeaderSelector;
+use Wordlift\Client\ObjectSerializer;
 
 /**
  * PluginDiagnosticsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -128,11 +128,11 @@ class PluginDiagnosticsApi
      *
      * Update
      *
-     * @param  \OpenAPI\Client\Model\Account $account account (required)
-     * @param  \OpenAPI\Client\Model\DiagnosticPluginRequest[] $diagnostic_plugin_request diagnostic_plugin_request (required)
+     * @param  \Wordlift\Client\Model\Account $account account (required)
+     * @param  \Wordlift\Client\Model\DiagnosticPluginRequest[] $diagnostic_plugin_request diagnostic_plugin_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDiagnosticPluginCollection'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -146,11 +146,11 @@ class PluginDiagnosticsApi
      *
      * Update
      *
-     * @param  \OpenAPI\Client\Model\Account $account (required)
-     * @param  \OpenAPI\Client\Model\DiagnosticPluginRequest[] $diagnostic_plugin_request (required)
+     * @param  \Wordlift\Client\Model\Account $account (required)
+     * @param  \Wordlift\Client\Model\DiagnosticPluginRequest[] $diagnostic_plugin_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDiagnosticPluginCollection'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -207,8 +207,8 @@ class PluginDiagnosticsApi
      *
      * Update
      *
-     * @param  \OpenAPI\Client\Model\Account $account (required)
-     * @param  \OpenAPI\Client\Model\DiagnosticPluginRequest[] $diagnostic_plugin_request (required)
+     * @param  \Wordlift\Client\Model\Account $account (required)
+     * @param  \Wordlift\Client\Model\DiagnosticPluginRequest[] $diagnostic_plugin_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDiagnosticPluginCollection'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -229,8 +229,8 @@ class PluginDiagnosticsApi
      *
      * Update
      *
-     * @param  \OpenAPI\Client\Model\Account $account (required)
-     * @param  \OpenAPI\Client\Model\DiagnosticPluginRequest[] $diagnostic_plugin_request (required)
+     * @param  \Wordlift\Client\Model\Account $account (required)
+     * @param  \Wordlift\Client\Model\DiagnosticPluginRequest[] $diagnostic_plugin_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDiagnosticPluginCollection'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -267,8 +267,8 @@ class PluginDiagnosticsApi
     /**
      * Create request for operation 'updateDiagnosticPluginCollection'
      *
-     * @param  \OpenAPI\Client\Model\Account $account (required)
-     * @param  \OpenAPI\Client\Model\DiagnosticPluginRequest[] $diagnostic_plugin_request (required)
+     * @param  \Wordlift\Client\Model\Account $account (required)
+     * @param  \Wordlift\Client\Model\DiagnosticPluginRequest[] $diagnostic_plugin_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDiagnosticPluginCollection'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

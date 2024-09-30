@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Wordlift\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Wordlift\Client\ApiException;
+use Wordlift\Client\Configuration;
+use Wordlift\Client\HeaderSelector;
+use Wordlift\Client\ObjectSerializer;
 
 /**
  * AccountsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -137,9 +137,9 @@ class AccountsApi
      * @param  int $id id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAccount'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Account
+     * @return \Wordlift\Client\Model\Account
      */
     public function getAccount($id, string $contentType = self::contentTypes['getAccount'][0])
     {
@@ -155,9 +155,9 @@ class AccountsApi
      * @param  int $id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAccount'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Account, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Wordlift\Client\Model\Account, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAccountWithHttpInfo($id, string $contentType = self::contentTypes['getAccount'][0])
     {
@@ -200,11 +200,11 @@ class AccountsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Account' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\Account' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Account' !== 'string') {
+                        if ('\Wordlift\Client\Model\Account' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -222,13 +222,13 @@ class AccountsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Account', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\Account', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\Account';
+            $returnType = '\Wordlift\Client\Model\Account';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -261,7 +261,7 @@ class AccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Account',
+                        '\Wordlift\Client\Model\Account',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -305,7 +305,7 @@ class AccountsApi
      */
     public function getAccountAsyncWithHttpInfo($id, string $contentType = self::contentTypes['getAccount'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Account';
+        $returnType = '\Wordlift\Client\Model\Account';
         $request = $this->getAccountRequest($id, $contentType);
 
         return $this->client
@@ -459,9 +459,9 @@ class AccountsApi
      * @param  string $ng_dataset_id The dataset id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listAccounts'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PageActiveAccount
+     * @return \Wordlift\Client\Model\PageActiveAccount
      */
     public function listAccounts($cursor = null, $limit = 10, $can_content_generation = null, $include_entity_count = false, $include_all_accounts = false, $include_subscription = false, $url = null, $ng_dataset_id = null, string $contentType = self::contentTypes['listAccounts'][0])
     {
@@ -484,9 +484,9 @@ class AccountsApi
      * @param  string $ng_dataset_id The dataset id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listAccounts'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PageActiveAccount, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Wordlift\Client\Model\PageActiveAccount, HTTP status code, HTTP response headers (array of strings)
      */
     public function listAccountsWithHttpInfo($cursor = null, $limit = 10, $can_content_generation = null, $include_entity_count = false, $include_all_accounts = false, $include_subscription = false, $url = null, $ng_dataset_id = null, string $contentType = self::contentTypes['listAccounts'][0])
     {
@@ -529,11 +529,11 @@ class AccountsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PageActiveAccount' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\PageActiveAccount' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PageActiveAccount' !== 'string') {
+                        if ('\Wordlift\Client\Model\PageActiveAccount' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -551,13 +551,13 @@ class AccountsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PageActiveAccount', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\PageActiveAccount', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PageActiveAccount';
+            $returnType = '\Wordlift\Client\Model\PageActiveAccount';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -590,7 +590,7 @@ class AccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PageActiveAccount',
+                        '\Wordlift\Client\Model\PageActiveAccount',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -648,7 +648,7 @@ class AccountsApi
      */
     public function listAccountsAsyncWithHttpInfo($cursor = null, $limit = 10, $can_content_generation = null, $include_entity_count = false, $include_all_accounts = false, $include_subscription = false, $url = null, $ng_dataset_id = null, string $contentType = self::contentTypes['listAccounts'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PageActiveAccount';
+        $returnType = '\Wordlift\Client\Model\PageActiveAccount';
         $request = $this->listAccountsRequest($cursor, $limit, $can_content_generation, $include_entity_count, $include_all_accounts, $include_subscription, $url, $ng_dataset_id, $contentType);
 
         return $this->client
@@ -865,12 +865,12 @@ class AccountsApi
      * Update an account.
      *
      * @param  int $id id (required)
-     * @param  \OpenAPI\Client\Model\UpdateAccountRequest $update_account_request update_account_request (required)
+     * @param  \Wordlift\Client\Model\UpdateAccountRequest $update_account_request update_account_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAccount'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Account
+     * @return \Wordlift\Client\Model\Account
      */
     public function updateAccount($id, $update_account_request, string $contentType = self::contentTypes['updateAccount'][0])
     {
@@ -884,12 +884,12 @@ class AccountsApi
      * Update an account.
      *
      * @param  int $id (required)
-     * @param  \OpenAPI\Client\Model\UpdateAccountRequest $update_account_request (required)
+     * @param  \Wordlift\Client\Model\UpdateAccountRequest $update_account_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAccount'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Account, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Wordlift\Client\Model\Account, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateAccountWithHttpInfo($id, $update_account_request, string $contentType = self::contentTypes['updateAccount'][0])
     {
@@ -932,11 +932,11 @@ class AccountsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Account' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\Account' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Account' !== 'string') {
+                        if ('\Wordlift\Client\Model\Account' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -954,13 +954,13 @@ class AccountsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Account', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\Account', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\Account';
+            $returnType = '\Wordlift\Client\Model\Account';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -993,7 +993,7 @@ class AccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Account',
+                        '\Wordlift\Client\Model\Account',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1009,7 +1009,7 @@ class AccountsApi
      * Update an account.
      *
      * @param  int $id (required)
-     * @param  \OpenAPI\Client\Model\UpdateAccountRequest $update_account_request (required)
+     * @param  \Wordlift\Client\Model\UpdateAccountRequest $update_account_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAccount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1031,7 +1031,7 @@ class AccountsApi
      * Update an account.
      *
      * @param  int $id (required)
-     * @param  \OpenAPI\Client\Model\UpdateAccountRequest $update_account_request (required)
+     * @param  \Wordlift\Client\Model\UpdateAccountRequest $update_account_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAccount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1039,7 +1039,7 @@ class AccountsApi
      */
     public function updateAccountAsyncWithHttpInfo($id, $update_account_request, string $contentType = self::contentTypes['updateAccount'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Account';
+        $returnType = '\Wordlift\Client\Model\Account';
         $request = $this->updateAccountRequest($id, $update_account_request, $contentType);
 
         return $this->client
@@ -1082,7 +1082,7 @@ class AccountsApi
      * Create request for operation 'updateAccount'
      *
      * @param  int $id (required)
-     * @param  \OpenAPI\Client\Model\UpdateAccountRequest $update_account_request (required)
+     * @param  \Wordlift\Client\Model\UpdateAccountRequest $update_account_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAccount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Wordlift\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Wordlift\Client\ObjectSerializer;
 
 /**
  * PageMerchantView Class Doc Comment
  *
  * @category Class
  * @description A page object with links to move to other pages and the list of objects.
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class PageMerchantView implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'first' => 'string',
-        'items' => '\OpenAPI\Client\Model\MerchantView[]',
+        'items' => '\Wordlift\Client\Model\MerchantView[]',
         'last' => 'string',
         'next' => 'string',
         'prev' => 'string',
@@ -381,7 +381,7 @@ class PageMerchantView implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets items
      *
-     * @return \OpenAPI\Client\Model\MerchantView[]
+     * @return \Wordlift\Client\Model\MerchantView[]
      */
     public function getItems()
     {
@@ -391,7 +391,7 @@ class PageMerchantView implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets items
      *
-     * @param \OpenAPI\Client\Model\MerchantView[] $items An array of objects.
+     * @param \Wordlift\Client\Model\MerchantView[] $items An array of objects.
      *
      * @return self
      */

@@ -1,4 +1,4 @@
-# OpenAPI\Client\MerchantsApi
+# Wordlift\Client\MerchantsApi
 
 All URIs are relative to https://api.wordlift.io, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to https://api.wordlift.io, except if the operation define
 ## `createMerchant()`
 
 ```php
-createMerchant($merchant_request): \OpenAPI\Client\Model\Merchant
+createMerchant($merchant_request): \Wordlift\Client\Model\Merchant
 ```
 
 Create
@@ -29,16 +29,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MerchantsApi(
+$apiInstance = new Wordlift\Client\Api\MerchantsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$merchant_request = new \OpenAPI\Client\Model\MerchantRequest(); // \OpenAPI\Client\Model\MerchantRequest
+$merchant_request = new \Wordlift\Client\Model\MerchantRequest(); // \Wordlift\Client\Model\MerchantRequest
 
 try {
     $result = $apiInstance->createMerchant($merchant_request);
@@ -52,11 +52,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **merchant_request** | [**\OpenAPI\Client\Model\MerchantRequest**](../Model/MerchantRequest.md)|  | |
+| **merchant_request** | [**\Wordlift\Client\Model\MerchantRequest**](../Model/MerchantRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Merchant**](../Model/Merchant.md)
+[**\Wordlift\Client\Model\Merchant**](../Model/Merchant.md)
 
 ### Authorization
 
@@ -89,10 +89,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MerchantsApi(
+$apiInstance = new Wordlift\Client\Api\MerchantsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -133,7 +133,7 @@ void (empty response body)
 ## `getMerchant()`
 
 ```php
-getMerchant($id): \OpenAPI\Client\Model\Merchant
+getMerchant($id): \Wordlift\Client\Model\Merchant
 ```
 
 Get by id
@@ -148,10 +148,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MerchantsApi(
+$apiInstance = new Wordlift\Client\Api\MerchantsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -175,7 +175,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Merchant**](../Model/Merchant.md)
+[**\Wordlift\Client\Model\Merchant**](../Model/Merchant.md)
 
 ### Authorization
 
@@ -193,7 +193,7 @@ try {
 ## `listMerchants()`
 
 ```php
-listMerchants($cursor, $limit, $deleted): \OpenAPI\Client\Model\PageMerchantView
+listMerchants($cursor, $limit, $deleted): \Wordlift\Client\Model\PageMerchantView
 ```
 
 List
@@ -208,10 +208,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MerchantsApi(
+$apiInstance = new Wordlift\Client\Api\MerchantsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -239,7 +239,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PageMerchantView**](../Model/PageMerchantView.md)
+[**\Wordlift\Client\Model\PageMerchantView**](../Model/PageMerchantView.md)
 
 ### Authorization
 
@@ -257,7 +257,7 @@ try {
 ## `updateMerchant()`
 
 ```php
-updateMerchant($id, $merchant_request): \OpenAPI\Client\Model\Merchant
+updateMerchant($id, $merchant_request): \Wordlift\Client\Model\Merchant
 ```
 
 Update
@@ -272,17 +272,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MerchantsApi(
+$apiInstance = new Wordlift\Client\Api\MerchantsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | The Merchant id
-$merchant_request = new \OpenAPI\Client\Model\MerchantRequest(); // \OpenAPI\Client\Model\MerchantRequest
+$merchant_request = new \Wordlift\Client\Model\MerchantRequest(); // \Wordlift\Client\Model\MerchantRequest
 
 try {
     $result = $apiInstance->updateMerchant($id, $merchant_request);
@@ -297,11 +297,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| The Merchant id | |
-| **merchant_request** | [**\OpenAPI\Client\Model\MerchantRequest**](../Model/MerchantRequest.md)|  | |
+| **merchant_request** | [**\Wordlift\Client\Model\MerchantRequest**](../Model/MerchantRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Merchant**](../Model/Merchant.md)
+[**\Wordlift\Client\Model\Merchant**](../Model/Merchant.md)
 
 ### Authorization
 

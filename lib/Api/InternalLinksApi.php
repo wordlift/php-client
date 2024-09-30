@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Wordlift\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Wordlift\Client\ApiException;
+use Wordlift\Client\Configuration;
+use Wordlift\Client\HeaderSelector;
+use Wordlift\Client\ObjectSerializer;
 
 /**
  * InternalLinksApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -131,10 +131,10 @@ class InternalLinksApi
      *
      * Create
      *
-     * @param  \OpenAPI\Client\Model\InternalLinkRequest $internal_link_request internal_link_request (required)
+     * @param  \Wordlift\Client\Model\InternalLinkRequest $internal_link_request internal_link_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createInternalLink'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return string[]
      */
@@ -149,10 +149,10 @@ class InternalLinksApi
      *
      * Create
      *
-     * @param  \OpenAPI\Client\Model\InternalLinkRequest $internal_link_request (required)
+     * @param  \Wordlift\Client\Model\InternalLinkRequest $internal_link_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createInternalLink'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of string[], HTTP status code, HTTP response headers (array of strings)
      */
@@ -273,7 +273,7 @@ class InternalLinksApi
      *
      * Create
      *
-     * @param  \OpenAPI\Client\Model\InternalLinkRequest $internal_link_request (required)
+     * @param  \Wordlift\Client\Model\InternalLinkRequest $internal_link_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createInternalLink'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -294,7 +294,7 @@ class InternalLinksApi
      *
      * Create
      *
-     * @param  \OpenAPI\Client\Model\InternalLinkRequest $internal_link_request (required)
+     * @param  \Wordlift\Client\Model\InternalLinkRequest $internal_link_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createInternalLink'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -344,7 +344,7 @@ class InternalLinksApi
     /**
      * Create request for operation 'createInternalLink'
      *
-     * @param  \OpenAPI\Client\Model\InternalLinkRequest $internal_link_request (required)
+     * @param  \Wordlift\Client\Model\InternalLinkRequest $internal_link_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createInternalLink'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -442,12 +442,12 @@ class InternalLinksApi
      *
      * Suggest
      *
-     * @param  \OpenAPI\Client\Model\InternalLinkRequest $internal_link_request internal_link_request (required)
+     * @param  \Wordlift\Client\Model\InternalLinkRequest $internal_link_request internal_link_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createInternalLinkSuggestion'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\InternalLink[]
+     * @return \Wordlift\Client\Model\InternalLink[]
      */
     public function createInternalLinkSuggestion($internal_link_request, string $contentType = self::contentTypes['createInternalLinkSuggestion'][0])
     {
@@ -460,12 +460,12 @@ class InternalLinksApi
      *
      * Suggest
      *
-     * @param  \OpenAPI\Client\Model\InternalLinkRequest $internal_link_request (required)
+     * @param  \Wordlift\Client\Model\InternalLinkRequest $internal_link_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createInternalLinkSuggestion'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\InternalLink[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Wordlift\Client\Model\InternalLink[], HTTP status code, HTTP response headers (array of strings)
      */
     public function createInternalLinkSuggestionWithHttpInfo($internal_link_request, string $contentType = self::contentTypes['createInternalLinkSuggestion'][0])
     {
@@ -508,11 +508,11 @@ class InternalLinksApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\InternalLink[]' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\InternalLink[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\InternalLink[]' !== 'string') {
+                        if ('\Wordlift\Client\Model\InternalLink[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -530,13 +530,13 @@ class InternalLinksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InternalLink[]', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\InternalLink[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\InternalLink[]';
+            $returnType = '\Wordlift\Client\Model\InternalLink[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -569,7 +569,7 @@ class InternalLinksApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InternalLink[]',
+                        '\Wordlift\Client\Model\InternalLink[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -584,7 +584,7 @@ class InternalLinksApi
      *
      * Suggest
      *
-     * @param  \OpenAPI\Client\Model\InternalLinkRequest $internal_link_request (required)
+     * @param  \Wordlift\Client\Model\InternalLinkRequest $internal_link_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createInternalLinkSuggestion'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -605,7 +605,7 @@ class InternalLinksApi
      *
      * Suggest
      *
-     * @param  \OpenAPI\Client\Model\InternalLinkRequest $internal_link_request (required)
+     * @param  \Wordlift\Client\Model\InternalLinkRequest $internal_link_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createInternalLinkSuggestion'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -613,7 +613,7 @@ class InternalLinksApi
      */
     public function createInternalLinkSuggestionAsyncWithHttpInfo($internal_link_request, string $contentType = self::contentTypes['createInternalLinkSuggestion'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\InternalLink[]';
+        $returnType = '\Wordlift\Client\Model\InternalLink[]';
         $request = $this->createInternalLinkSuggestionRequest($internal_link_request, $contentType);
 
         return $this->client
@@ -655,7 +655,7 @@ class InternalLinksApi
     /**
      * Create request for operation 'createInternalLinkSuggestion'
      *
-     * @param  \OpenAPI\Client\Model\InternalLinkRequest $internal_link_request (required)
+     * @param  \Wordlift\Client\Model\InternalLinkRequest $internal_link_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createInternalLinkSuggestion'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

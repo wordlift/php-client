@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Wordlift\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Wordlift\Client\ApiException;
+use Wordlift\Client\Configuration;
+use Wordlift\Client\HeaderSelector;
+use Wordlift\Client\ObjectSerializer;
 
 /**
  * PlatformConsumptionsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -135,9 +135,9 @@ class PlatformConsumptionsApi
      * @param  int $consumption_to_add consumption_to_add (optional, default to 1)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrUpdateMyPlatformConsumption'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PageWithLimits
+     * @return \Wordlift\Client\Model\PageWithLimits
      */
     public function createOrUpdateMyPlatformConsumption($applies_to, $consumption_to_add = 1, string $contentType = self::contentTypes['createOrUpdateMyPlatformConsumption'][0])
     {
@@ -154,9 +154,9 @@ class PlatformConsumptionsApi
      * @param  int $consumption_to_add (optional, default to 1)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrUpdateMyPlatformConsumption'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PageWithLimits, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Wordlift\Client\Model\PageWithLimits, HTTP status code, HTTP response headers (array of strings)
      */
     public function createOrUpdateMyPlatformConsumptionWithHttpInfo($applies_to, $consumption_to_add = 1, string $contentType = self::contentTypes['createOrUpdateMyPlatformConsumption'][0])
     {
@@ -199,11 +199,11 @@ class PlatformConsumptionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PageWithLimits' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\PageWithLimits' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PageWithLimits' !== 'string') {
+                        if ('\Wordlift\Client\Model\PageWithLimits' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -221,13 +221,13 @@ class PlatformConsumptionsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PageWithLimits', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\PageWithLimits', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PageWithLimits';
+            $returnType = '\Wordlift\Client\Model\PageWithLimits';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -260,7 +260,7 @@ class PlatformConsumptionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PageWithLimits',
+                        '\Wordlift\Client\Model\PageWithLimits',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -306,7 +306,7 @@ class PlatformConsumptionsApi
      */
     public function createOrUpdateMyPlatformConsumptionAsyncWithHttpInfo($applies_to, $consumption_to_add = 1, string $contentType = self::contentTypes['createOrUpdateMyPlatformConsumption'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PageWithLimits';
+        $returnType = '\Wordlift\Client\Model\PageWithLimits';
         $request = $this->createOrUpdateMyPlatformConsumptionRequest($applies_to, $consumption_to_add, $contentType);
 
         return $this->client
@@ -468,9 +468,9 @@ class PlatformConsumptionsApi
      * @param  bool $include_limit include_limit (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMyPlatformConsumption'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PageWithLimits
+     * @return \Wordlift\Client\Model\PageWithLimits
      */
     public function getMyPlatformConsumption($applies_to, $include_subscription = null, $include_limit = null, string $contentType = self::contentTypes['getMyPlatformConsumption'][0])
     {
@@ -488,9 +488,9 @@ class PlatformConsumptionsApi
      * @param  bool $include_limit (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMyPlatformConsumption'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PageWithLimits, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Wordlift\Client\Model\PageWithLimits, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMyPlatformConsumptionWithHttpInfo($applies_to, $include_subscription = null, $include_limit = null, string $contentType = self::contentTypes['getMyPlatformConsumption'][0])
     {
@@ -533,11 +533,11 @@ class PlatformConsumptionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PageWithLimits' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\PageWithLimits' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PageWithLimits' !== 'string') {
+                        if ('\Wordlift\Client\Model\PageWithLimits' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -555,13 +555,13 @@ class PlatformConsumptionsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PageWithLimits', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\PageWithLimits', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PageWithLimits';
+            $returnType = '\Wordlift\Client\Model\PageWithLimits';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -594,7 +594,7 @@ class PlatformConsumptionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PageWithLimits',
+                        '\Wordlift\Client\Model\PageWithLimits',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -642,7 +642,7 @@ class PlatformConsumptionsApi
      */
     public function getMyPlatformConsumptionAsyncWithHttpInfo($applies_to, $include_subscription = null, $include_limit = null, string $contentType = self::contentTypes['getMyPlatformConsumption'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PageWithLimits';
+        $returnType = '\Wordlift\Client\Model\PageWithLimits';
         $request = $this->getMyPlatformConsumptionRequest($applies_to, $include_subscription, $include_limit, $contentType);
 
         return $this->client

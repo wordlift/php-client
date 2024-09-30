@@ -1,4 +1,4 @@
-# OpenAPI\Client\AccountApi
+# Wordlift\Client\AccountApi
 
 All URIs are relative to https://api.wordlift.io, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to https://api.wordlift.io, except if the operation define
 ## `getMe()`
 
 ```php
-getMe(): \OpenAPI\Client\Model\AccountInfo
+getMe(): \Wordlift\Client\Model\AccountInfo
 ```
 
 Get
@@ -25,12 +25,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Wordlift\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountApi(
+$apiInstance = new Wordlift\Client\Api\AccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -51,7 +51,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AccountInfo**](../Model/AccountInfo.md)
+[**\Wordlift\Client\Model\AccountInfo**](../Model/AccountInfo.md)
 
 ### Authorization
 

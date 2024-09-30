@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Wordlift\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Wordlift\Client\ObjectSerializer;
 
 /**
  * Filter Class Doc Comment
  *
  * @category Class
  * @description A query request filter.
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,10 +59,10 @@ class Filter implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'filters' => '\OpenAPI\Client\Model\Filter[]',
+        'filters' => '\Wordlift\Client\Model\Filter[]',
         'key' => 'string',
         'operator' => 'string',
-        'value' => '\OpenAPI\Client\Model\FilterValue'
+        'value' => '\Wordlift\Client\Model\FilterValue'
     ];
 
     /**
@@ -358,7 +358,7 @@ class Filter implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets filters
      *
-     * @return \OpenAPI\Client\Model\Filter[]|null
+     * @return \Wordlift\Client\Model\Filter[]|null
      */
     public function getFilters()
     {
@@ -368,7 +368,7 @@ class Filter implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets filters
      *
-     * @param \OpenAPI\Client\Model\Filter[]|null $filters Operational filters such as AND or OR.
+     * @param \Wordlift\Client\Model\Filter[]|null $filters Operational filters such as AND or OR.
      *
      * @return self
      */
@@ -449,7 +449,7 @@ class Filter implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets value
      *
-     * @return \OpenAPI\Client\Model\FilterValue|null
+     * @return \Wordlift\Client\Model\FilterValue|null
      */
     public function getValue()
     {
@@ -459,7 +459,7 @@ class Filter implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets value
      *
-     * @param \OpenAPI\Client\Model\FilterValue|null $value value
+     * @param \Wordlift\Client\Model\FilterValue|null $value value
      *
      * @return self
      */

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **include_exclude_default** | **string** | The default setting for include/exclude URLs. | [optional] [readonly] [default to 'include']
 **key** | **string** | The Key | [optional] [readonly]
 **language** | **string** | The language code | [optional] [readonly]
-**networks** | [**\OpenAPI\Client\Model\NetworkAccountInfo[]**](NetworkAccountInfo.md) | A list of connected Account Information | [readonly]
+**networks** | [**\Wordlift\Client\Model\NetworkAccountInfo[]**](NetworkAccountInfo.md) | A list of connected Account Information | [readonly]
 **ng_dataset_id** | **string** |  | [optional]
 **subscription_id** | **int** | The Subscription Id | [readonly]
 **url** | **string** | The website URL | [optional] [readonly]

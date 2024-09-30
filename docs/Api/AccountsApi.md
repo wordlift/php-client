@@ -1,4 +1,4 @@
-# OpenAPI\Client\AccountsApi
+# Wordlift\Client\AccountsApi
 
 All URIs are relative to https://api.wordlift.io, except if the operation defines another base path.
 
@@ -12,7 +12,7 @@ All URIs are relative to https://api.wordlift.io, except if the operation define
 ## `getAccount()`
 
 ```php
-getAccount($id): \OpenAPI\Client\Model\Account
+getAccount($id): \Wordlift\Client\Model\Account
 ```
 
 Get an account.
@@ -27,15 +27,15 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 // Configure HTTP basic authorization: BasicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsApi(
+$apiInstance = new Wordlift\Client\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -59,7 +59,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Account**](../Model/Account.md)
+[**\Wordlift\Client\Model\Account**](../Model/Account.md)
 
 ### Authorization
 
@@ -77,7 +77,7 @@ try {
 ## `listAccounts()`
 
 ```php
-listAccounts($cursor, $limit, $can_content_generation, $include_entity_count, $include_all_accounts, $include_subscription, $url, $ng_dataset_id): \OpenAPI\Client\Model\PageActiveAccount
+listAccounts($cursor, $limit, $can_content_generation, $include_entity_count, $include_all_accounts, $include_subscription, $url, $ng_dataset_id): \Wordlift\Client\Model\PageActiveAccount
 ```
 
 List
@@ -92,15 +92,15 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 // Configure HTTP basic authorization: BasicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsApi(
+$apiInstance = new Wordlift\Client\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -138,7 +138,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PageActiveAccount**](../Model/PageActiveAccount.md)
+[**\Wordlift\Client\Model\PageActiveAccount**](../Model/PageActiveAccount.md)
 
 ### Authorization
 
@@ -156,7 +156,7 @@ try {
 ## `updateAccount()`
 
 ```php
-updateAccount($id, $update_account_request): \OpenAPI\Client\Model\Account
+updateAccount($id, $update_account_request): \Wordlift\Client\Model\Account
 ```
 
 Update an account.
@@ -171,22 +171,22 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 // Configure HTTP basic authorization: BasicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsApi(
+$apiInstance = new Wordlift\Client\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int
-$update_account_request = new \OpenAPI\Client\Model\UpdateAccountRequest(); // \OpenAPI\Client\Model\UpdateAccountRequest
+$update_account_request = new \Wordlift\Client\Model\UpdateAccountRequest(); // \Wordlift\Client\Model\UpdateAccountRequest
 
 try {
     $result = $apiInstance->updateAccount($id, $update_account_request);
@@ -201,11 +201,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
-| **update_account_request** | [**\OpenAPI\Client\Model\UpdateAccountRequest**](../Model/UpdateAccountRequest.md)|  | |
+| **update_account_request** | [**\Wordlift\Client\Model\UpdateAccountRequest**](../Model/UpdateAccountRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Account**](../Model/Account.md)
+[**\Wordlift\Client\Model\Account**](../Model/Account.md)
 
 ### Authorization
 

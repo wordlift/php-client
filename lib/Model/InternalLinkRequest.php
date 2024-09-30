@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Wordlift\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Wordlift\Client\ObjectSerializer;
 
 /**
  * InternalLinkRequest Class Doc Comment
  *
  * @category Class
  * @description An Internal Links request.
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,8 +59,8 @@ class InternalLinkRequest implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'anchor_text' => '\OpenAPI\Client\Model\AnchorText',
-        'items' => '\OpenAPI\Client\Model\Item[]',
+        'anchor_text' => '\Wordlift\Client\Model\AnchorText',
+        'items' => '\Wordlift\Client\Model\Item[]',
         'template' => 'string'
     ];
 
@@ -311,7 +311,7 @@ class InternalLinkRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets anchor_text
      *
-     * @return \OpenAPI\Client\Model\AnchorText|null
+     * @return \Wordlift\Client\Model\AnchorText|null
      */
     public function getAnchorText()
     {
@@ -321,7 +321,7 @@ class InternalLinkRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets anchor_text
      *
-     * @param \OpenAPI\Client\Model\AnchorText|null $anchor_text anchor_text
+     * @param \Wordlift\Client\Model\AnchorText|null $anchor_text anchor_text
      *
      * @return self
      */
@@ -338,7 +338,7 @@ class InternalLinkRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets items
      *
-     * @return \OpenAPI\Client\Model\Item[]
+     * @return \Wordlift\Client\Model\Item[]
      */
     public function getItems()
     {
@@ -348,7 +348,7 @@ class InternalLinkRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets items
      *
-     * @param \OpenAPI\Client\Model\Item[] $items An array of items.
+     * @param \Wordlift\Client\Model\Item[] $items An array of items.
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Wordlift\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Wordlift\Client\ObjectSerializer;
 
 /**
  * InternalLink Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class InternalLink implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'destinations' => '\OpenAPI\Client\Model\InternalLinkDestination[]',
-        'source' => '\OpenAPI\Client\Model\InternalLinkSource'
+        'destinations' => '\Wordlift\Client\Model\InternalLinkDestination[]',
+        'source' => '\Wordlift\Client\Model\InternalLinkSource'
     ];
 
     /**
@@ -306,7 +306,7 @@ class InternalLink implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets destinations
      *
-     * @return \OpenAPI\Client\Model\InternalLinkDestination[]
+     * @return \Wordlift\Client\Model\InternalLinkDestination[]
      */
     public function getDestinations()
     {
@@ -316,7 +316,7 @@ class InternalLink implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets destinations
      *
-     * @param \OpenAPI\Client\Model\InternalLinkDestination[] $destinations InternalLink destinations configuration.
+     * @param \Wordlift\Client\Model\InternalLinkDestination[] $destinations InternalLink destinations configuration.
      *
      * @return self
      */
@@ -333,7 +333,7 @@ class InternalLink implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets source
      *
-     * @return \OpenAPI\Client\Model\InternalLinkSource
+     * @return \Wordlift\Client\Model\InternalLinkSource
      */
     public function getSource()
     {
@@ -343,7 +343,7 @@ class InternalLink implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets source
      *
-     * @param \OpenAPI\Client\Model\InternalLinkSource $source source
+     * @param \Wordlift\Client\Model\InternalLinkSource $source source
      *
      * @return self
      */

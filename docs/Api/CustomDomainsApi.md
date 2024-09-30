@@ -1,4 +1,4 @@
-# OpenAPI\Client\CustomDomainsApi
+# Wordlift\Client\CustomDomainsApi
 
 All URIs are relative to https://api.wordlift.io, except if the operation defines another base path.
 
@@ -25,16 +25,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomDomainsApi(
+$apiInstance = new Wordlift\Client\Api\CustomDomainsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$domain_validation_request = new \OpenAPI\Client\Model\DomainValidationRequest(); // \OpenAPI\Client\Model\DomainValidationRequest
+$domain_validation_request = new \Wordlift\Client\Model\DomainValidationRequest(); // \Wordlift\Client\Model\DomainValidationRequest
 
 try {
     $apiInstance->validate($domain_validation_request);
@@ -47,7 +47,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **domain_validation_request** | [**\OpenAPI\Client\Model\DomainValidationRequest**](../Model/DomainValidationRequest.md)|  | |
+| **domain_validation_request** | [**\Wordlift\Client\Model\DomainValidationRequest**](../Model/DomainValidationRequest.md)|  | |
 
 ### Return type
 

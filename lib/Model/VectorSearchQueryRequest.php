@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Wordlift\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Wordlift\Client\ObjectSerializer;
 
 /**
  * VectorSearchQueryRequest Class Doc Comment
  *
  * @category Class
  * @description A query request.
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class VectorSearchQueryRequest implements ModelInterface, ArrayAccess, \JsonSeri
       */
     protected static $openAPITypes = [
         'fields' => 'string[]',
-        'filters' => '\OpenAPI\Client\Model\Filter[]',
+        'filters' => '\Wordlift\Client\Model\Filter[]',
         'query_embedding' => 'float[]',
         'query_string' => 'string',
         'query_uri' => 'string',
@@ -369,7 +369,7 @@ class VectorSearchQueryRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets filters
      *
-     * @return \OpenAPI\Client\Model\Filter[]|null
+     * @return \Wordlift\Client\Model\Filter[]|null
      */
     public function getFilters()
     {
@@ -379,7 +379,7 @@ class VectorSearchQueryRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets filters
      *
-     * @param \OpenAPI\Client\Model\Filter[]|null $filters A list of prefilters.
+     * @param \Wordlift\Client\Model\Filter[]|null $filters A list of prefilters.
      *
      * @return self
      */

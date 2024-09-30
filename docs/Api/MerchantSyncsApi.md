@@ -1,4 +1,4 @@
-# OpenAPI\Client\MerchantSyncsApi
+# Wordlift\Client\MerchantSyncsApi
 
 All URIs are relative to https://api.wordlift.io, except if the operation defines another base path.
 
@@ -12,7 +12,7 @@ All URIs are relative to https://api.wordlift.io, except if the operation define
 ## `createSync()`
 
 ```php
-createSync($merchant_id): \OpenAPI\Client\Model\MerchantSync
+createSync($merchant_id): \Wordlift\Client\Model\MerchantSync
 ```
 
 Start
@@ -25,10 +25,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MerchantSyncsApi(
+$apiInstance = new Wordlift\Client\Api\MerchantSyncsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -52,7 +52,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MerchantSync**](../Model/MerchantSync.md)
+[**\Wordlift\Client\Model\MerchantSync**](../Model/MerchantSync.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ try {
 ## `getMerchantSync()`
 
 ```php
-getMerchantSync($merchant_id, $id): \OpenAPI\Client\Model\MerchantSync
+getMerchantSync($merchant_id, $id): \Wordlift\Client\Model\MerchantSync
 ```
 
 Get by id
@@ -83,10 +83,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MerchantSyncsApi(
+$apiInstance = new Wordlift\Client\Api\MerchantSyncsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -112,7 +112,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MerchantSync**](../Model/MerchantSync.md)
+[**\Wordlift\Client\Model\MerchantSync**](../Model/MerchantSync.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ try {
 ## `listMerchantSyncs()`
 
 ```php
-listMerchantSyncs($merchant_id, $cursor, $limit, $sort): \OpenAPI\Client\Model\PageMerchantSync
+listMerchantSyncs($merchant_id, $cursor, $limit, $sort): \Wordlift\Client\Model\PageMerchantSync
 ```
 
 List
@@ -145,10 +145,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MerchantSyncsApi(
+$apiInstance = new Wordlift\Client\Api\MerchantSyncsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -178,7 +178,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PageMerchantSync**](../Model/PageMerchantSync.md)
+[**\Wordlift\Client\Model\PageMerchantSync**](../Model/PageMerchantSync.md)
 
 ### Authorization
 

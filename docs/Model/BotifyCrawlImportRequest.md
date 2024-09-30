@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **collection** | **string** |  | [optional]
 **description** | **string[]** |  | [optional]
-**filters** | [**\OpenAPI\Client\Model\Filter[]**](Filter.md) |  | [optional]
+**filters** | [**\Wordlift\Client\Model\Filter[]**](Filter.md) |  | [optional]
 **headline** | **string** |  | [optional]
 **request_embeddings** | **string[]** |  | [optional]
 **text** | **string[]** |  | [optional]

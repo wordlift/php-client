@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Wordlift\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Wordlift\Client\ApiException;
+use Wordlift\Client\Configuration;
+use Wordlift\Client\HeaderSelector;
+use Wordlift\Client\ObjectSerializer;
 
 /**
  * AccountApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -130,9 +130,9 @@ class AccountApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMe'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AccountInfo
+     * @return \Wordlift\Client\Model\AccountInfo
      */
     public function getMe(string $contentType = self::contentTypes['getMe'][0])
     {
@@ -147,9 +147,9 @@ class AccountApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMe'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AccountInfo, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Wordlift\Client\Model\AccountInfo, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMeWithHttpInfo(string $contentType = self::contentTypes['getMe'][0])
     {
@@ -192,11 +192,11 @@ class AccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AccountInfo' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\AccountInfo' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AccountInfo' !== 'string') {
+                        if ('\Wordlift\Client\Model\AccountInfo' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -214,13 +214,13 @@ class AccountApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AccountInfo', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\AccountInfo', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\AccountInfo';
+            $returnType = '\Wordlift\Client\Model\AccountInfo';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -253,7 +253,7 @@ class AccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AccountInfo',
+                        '\Wordlift\Client\Model\AccountInfo',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -295,7 +295,7 @@ class AccountApi
      */
     public function getMeAsyncWithHttpInfo(string $contentType = self::contentTypes['getMe'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AccountInfo';
+        $returnType = '\Wordlift\Client\Model\AccountInfo';
         $request = $this->getMeRequest($contentType);
 
         return $this->client

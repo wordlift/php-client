@@ -1,4 +1,4 @@
-# OpenAPI\Client\PlatformLimitsApi
+# Wordlift\Client\PlatformLimitsApi
 
 All URIs are relative to https://api.wordlift.io, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to https://api.wordlift.io, except if the operation define
 ## `createPlatformLimit()`
 
 ```php
-createPlatformLimit($platform_limit_request): \OpenAPI\Client\Model\PlatformLimit
+createPlatformLimit($platform_limit_request): \Wordlift\Client\Model\PlatformLimit
 ```
 
 Create Platform Limit
@@ -29,18 +29,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: BasicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new OpenAPI\Client\Api\PlatformLimitsApi(
+$apiInstance = new Wordlift\Client\Api\PlatformLimitsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$platform_limit_request = new \OpenAPI\Client\Model\PlatformLimitRequest(); // \OpenAPI\Client\Model\PlatformLimitRequest
+$platform_limit_request = new \Wordlift\Client\Model\PlatformLimitRequest(); // \Wordlift\Client\Model\PlatformLimitRequest
 
 try {
     $result = $apiInstance->createPlatformLimit($platform_limit_request);
@@ -54,11 +54,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **platform_limit_request** | [**\OpenAPI\Client\Model\PlatformLimitRequest**](../Model/PlatformLimitRequest.md)|  | |
+| **platform_limit_request** | [**\Wordlift\Client\Model\PlatformLimitRequest**](../Model/PlatformLimitRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PlatformLimit**](../Model/PlatformLimit.md)
+[**\Wordlift\Client\Model\PlatformLimit**](../Model/PlatformLimit.md)
 
 ### Authorization
 
@@ -91,12 +91,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: BasicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new OpenAPI\Client\Api\PlatformLimitsApi(
+$apiInstance = new Wordlift\Client\Api\PlatformLimitsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -137,7 +137,7 @@ void (empty response body)
 ## `getPlatformLimit()`
 
 ```php
-getPlatformLimit($id): \OpenAPI\Client\Model\PlatformLimit
+getPlatformLimit($id): \Wordlift\Client\Model\PlatformLimit
 ```
 
 Get Platform Limit
@@ -152,12 +152,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: BasicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new OpenAPI\Client\Api\PlatformLimitsApi(
+$apiInstance = new Wordlift\Client\Api\PlatformLimitsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -181,7 +181,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PlatformLimit**](../Model/PlatformLimit.md)
+[**\Wordlift\Client\Model\PlatformLimit**](../Model/PlatformLimit.md)
 
 ### Authorization
 
@@ -199,7 +199,7 @@ try {
 ## `listPlatformLimits()`
 
 ```php
-listPlatformLimits($based_on_in, $based_on_value_in, $applies_to_in, $scope_in): \OpenAPI\Client\Model\PagePlatformLimit
+listPlatformLimits($based_on_in, $based_on_value_in, $applies_to_in, $scope_in): \Wordlift\Client\Model\PagePlatformLimit
 ```
 
 List Platform Limits
@@ -214,12 +214,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: BasicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new OpenAPI\Client\Api\PlatformLimitsApi(
+$apiInstance = new Wordlift\Client\Api\PlatformLimitsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -249,7 +249,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PagePlatformLimit**](../Model/PagePlatformLimit.md)
+[**\Wordlift\Client\Model\PagePlatformLimit**](../Model/PagePlatformLimit.md)
 
 ### Authorization
 
@@ -267,7 +267,7 @@ try {
 ## `updatePlatformLimit()`
 
 ```php
-updatePlatformLimit($id, $platform_limit_request): \OpenAPI\Client\Model\PlatformLimit
+updatePlatformLimit($id, $platform_limit_request): \Wordlift\Client\Model\PlatformLimit
 ```
 
 Update Platform Limit
@@ -282,19 +282,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: BasicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Wordlift\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new OpenAPI\Client\Api\PlatformLimitsApi(
+$apiInstance = new Wordlift\Client\Api\PlatformLimitsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | Platform Limit id
-$platform_limit_request = new \OpenAPI\Client\Model\PlatformLimitRequest(); // \OpenAPI\Client\Model\PlatformLimitRequest
+$platform_limit_request = new \Wordlift\Client\Model\PlatformLimitRequest(); // \Wordlift\Client\Model\PlatformLimitRequest
 
 try {
     $result = $apiInstance->updatePlatformLimit($id, $platform_limit_request);
@@ -309,11 +309,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| Platform Limit id | |
-| **platform_limit_request** | [**\OpenAPI\Client\Model\PlatformLimitRequest**](../Model/PlatformLimitRequest.md)|  | |
+| **platform_limit_request** | [**\Wordlift\Client\Model\PlatformLimitRequest**](../Model/PlatformLimitRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PlatformLimit**](../Model/PlatformLimit.md)
+[**\Wordlift\Client\Model\PlatformLimit**](../Model/PlatformLimit.md)
 
 ### Authorization
 

@@ -1,4 +1,4 @@
-# OpenAPI\Client\IncludeExcludesWordPressPluginApi
+# Wordlift\Client\IncludeExcludesWordPressPluginApi
 
 All URIs are relative to https://api.wordlift.io, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://api.wordlift.io, except if the operation define
 ## `listIncludeExcludes()`
 
 ```php
-listIncludeExcludes($account): \OpenAPI\Client\Model\IncludeExclude[]
+listIncludeExcludes($account): \Wordlift\Client\Model\IncludeExclude[]
 ```
 
 List
@@ -26,12 +26,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\IncludeExcludesWordPressPluginApi(
+$apiInstance = new Wordlift\Client\Api\IncludeExcludesWordPressPluginApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$account = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\Account(); // \OpenAPI\Client\Model\Account
+$account = new \Wordlift\Client\Model\\Wordlift\Client\Model\Account(); // \Wordlift\Client\Model\Account
 
 try {
     $result = $apiInstance->listIncludeExcludes($account);
@@ -45,11 +45,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **account** | [**\OpenAPI\Client\Model\Account**](../Model/.md)|  | |
+| **account** | [**\Wordlift\Client\Model\Account**](../Model/.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\IncludeExclude[]**](../Model/IncludeExclude.md)
+[**\Wordlift\Client\Model\IncludeExclude[]**](../Model/IncludeExclude.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ No authorization required
 ## `updateIncludeExcludes()`
 
 ```php
-updateIncludeExcludes($account, $include_exclude_request): \OpenAPI\Client\Model\IncludeExclude[]
+updateIncludeExcludes($account, $include_exclude_request): \Wordlift\Client\Model\IncludeExclude[]
 ```
 
 Update
@@ -82,13 +82,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\IncludeExcludesWordPressPluginApi(
+$apiInstance = new Wordlift\Client\Api\IncludeExcludesWordPressPluginApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$account = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\Account(); // \OpenAPI\Client\Model\Account
-$include_exclude_request = array(new \OpenAPI\Client\Model\IncludeExcludeRequest()); // \OpenAPI\Client\Model\IncludeExcludeRequest[]
+$account = new \Wordlift\Client\Model\\Wordlift\Client\Model\Account(); // \Wordlift\Client\Model\Account
+$include_exclude_request = array(new \Wordlift\Client\Model\IncludeExcludeRequest()); // \Wordlift\Client\Model\IncludeExcludeRequest[]
 
 try {
     $result = $apiInstance->updateIncludeExcludes($account, $include_exclude_request);
@@ -102,12 +102,12 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **account** | [**\OpenAPI\Client\Model\Account**](../Model/.md)|  | |
-| **include_exclude_request** | [**\OpenAPI\Client\Model\IncludeExcludeRequest[]**](../Model/IncludeExcludeRequest.md)|  | |
+| **account** | [**\Wordlift\Client\Model\Account**](../Model/.md)|  | |
+| **include_exclude_request** | [**\Wordlift\Client\Model\IncludeExcludeRequest[]**](../Model/IncludeExcludeRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\IncludeExclude[]**](../Model/IncludeExclude.md)
+[**\Wordlift\Client\Model\IncludeExclude[]**](../Model/IncludeExclude.md)
 
 ### Authorization
 

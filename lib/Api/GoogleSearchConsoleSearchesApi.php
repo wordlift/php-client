@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Wordlift\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Wordlift\Client\ApiException;
+use Wordlift\Client\Configuration;
+use Wordlift\Client\HeaderSelector;
+use Wordlift\Client\ObjectSerializer;
 
 /**
  * GoogleSearchConsoleSearchesApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Wordlift\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -136,9 +136,9 @@ class GoogleSearchConsoleSearchesApi
      * @param  int $limit The maximum number of results (optional, default to 10)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listWebsiteSearch1'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PageWebsiteSearch
+     * @return \Wordlift\Client\Model\PageWebsiteSearch
      */
     public function listWebsiteSearch1($since, $until, $dimensions, $cursor = null, $data_state = null, $limit = 10, string $contentType = self::contentTypes['listWebsiteSearch1'][0])
     {
@@ -159,9 +159,9 @@ class GoogleSearchConsoleSearchesApi
      * @param  int $limit The maximum number of results (optional, default to 10)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listWebsiteSearch1'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Wordlift\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PageWebsiteSearch, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Wordlift\Client\Model\PageWebsiteSearch, HTTP status code, HTTP response headers (array of strings)
      */
     public function listWebsiteSearch1WithHttpInfo($since, $until, $dimensions, $cursor = null, $data_state = null, $limit = 10, string $contentType = self::contentTypes['listWebsiteSearch1'][0])
     {
@@ -204,11 +204,11 @@ class GoogleSearchConsoleSearchesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PageWebsiteSearch' === '\SplFileObject') {
+                    if ('\Wordlift\Client\Model\PageWebsiteSearch' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PageWebsiteSearch' !== 'string') {
+                        if ('\Wordlift\Client\Model\PageWebsiteSearch' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -226,13 +226,13 @@ class GoogleSearchConsoleSearchesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PageWebsiteSearch', []),
+                        ObjectSerializer::deserialize($content, '\Wordlift\Client\Model\PageWebsiteSearch', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PageWebsiteSearch';
+            $returnType = '\Wordlift\Client\Model\PageWebsiteSearch';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -265,7 +265,7 @@ class GoogleSearchConsoleSearchesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PageWebsiteSearch',
+                        '\Wordlift\Client\Model\PageWebsiteSearch',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -319,7 +319,7 @@ class GoogleSearchConsoleSearchesApi
      */
     public function listWebsiteSearch1AsyncWithHttpInfo($since, $until, $dimensions, $cursor = null, $data_state = null, $limit = 10, string $contentType = self::contentTypes['listWebsiteSearch1'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PageWebsiteSearch';
+        $returnType = '\Wordlift\Client\Model\PageWebsiteSearch';
         $request = $this->listWebsiteSearch1Request($since, $until, $dimensions, $cursor, $data_state, $limit, $contentType);
 
         return $this->client
